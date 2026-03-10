@@ -5,6 +5,57 @@
 
 <style>
 
+  /* Navbar base */
+.navbar {
+  background-color: #15173D;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar li a {
+  display: block;
+  color: #F1E9E9;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #982598;
+}
+
+/* Dropdown */
+.navbar .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #15173D;
+  min-width: 160px;
+  z-index: 1;
+  flex-direction: column;
+}
+
+.navbar .dropdown-content li a {
+  padding: 10px 14px;
+  text-align: left;
+}
+
+/* Show dropdown on hover */
+.navbar .dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
 body{
 background:#15173D;
 font-family:Arial;
@@ -420,4 +471,5 @@ note.style.display="block";
 </body>
 
 </html>
+
 
