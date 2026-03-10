@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ICT Q3-Q4</title>
+
+<style>
+
+body{
+background:#15173D;
+font-family:Arial;
+color:#F1E9E9;
+margin:0;
+padding:20px;
+}
+
+h1{
+text-align:center;
+margin:40px 0;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+}
+
+/* LESSON LAYOUT */
+
+.lesson-row{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.lesson-box{
+background:#982598;
+padding:20px;
+border-radius:10px;
+width:45%;
+text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,0.3);
+}
+
+.bottom-box{
+width:45%;
+}
+
+.lesson-img{
+width:100%;
+margin-top:10px;
+border-radius:6px;
+display:none;
+}
+
+/* BUTTON */
+
+.btn{
+background:#F1E9E9;
+color:#15173D;
+border:none;
+padding:8px 14px;
+margin:6px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.btn:hover{
+opacity:.85;
+}
+
+/* EVENTS SECTION */
+
+.events-row{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:nowrap;
+}
+
+.event-box{
+background:#982598;
+padding:15px;
+border-radius:10px;
+width:30%;
+text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,0.3);
+}
+
+.event-box img{
+width:100%;
+border-radius:6px;
+margin-bottom:8px;
+}
+
+.caption{
+font-size:14px;
+}
+
+.noli-section{
+display:flex;
+gap:30px;
+align-items:flex-start;
+}
+
+.video-area{
+width:60%;
+}
+
+.links-area{
+width:40%;
+}
+
+.access-link{
+color:#F1E9E9;
+text-decoration:none;
+display:block;
+margin:10px 0;
+background-color:#982598;
+}
+
+.access-link:hover{
+text-decoration:underline;
+
+}
+
+.ps{
+cursor:pointer;
+margin-top:10px;
+background-color:#982598;
+}
+
+.note{
+display:none;
+font-size:13px;
+background-color:#982598;
+}
+
+</style>
+</head>
+
+<body style="font-family:Bell MT;">
+
+<hr color="white">
+<hr color="white">
+
+<h1>Q3 LESSONS</h1>
+
+<div class="container">
+
+<div class="lesson-row">
+
+<div class="lesson-box">
+<h3>Lesson 1</h3>
+
+<button class="btn" onclick="toggle('l1a')">Text Coding</button>
+<img class="lesson-img" id="l1a" src="browser3.1.png">
+
+<button class="btn" onclick="toggle('l1b')">Browser Output</button>
+<img class="lesson-img" id="l1b" src="browser3.11.png">
+
+</div>
+
+<div class="lesson-box">
+<h3>Lesson 2</h3>
+
+<button class="btn" onclick="toggle('l2a')">Text Coding</button>
+<img class="lesson-img" id="l2a" src="browser3.2.png">
+
+<button class="btn" onclick="toggle('l2b')">Browser Output</button>
+<img class="lesson-img" id="l2b" src="browser3.22.png">
+
+</div>
+
+</div>
+
+<br><br>
+
+<div class="lesson-row">
+
+<div class="lesson-box bottom-box">
+
+<h3>Lesson 3</h3>
+
+<button class="btn" onclick="toggle('l3a')">Text Coding</button>
+<img class="lesson-img" id="l3a" src="browser3.3.png">
+
+<button class="btn" onclick="toggle('l3b')">Browser Output</button>
+<img class="lesson-img" id="l3b" src="browser3.33.png">
+
+</div>
+
+</div>
+
+</div>
+
+<h1>Documentations / Events</h1>
+
+<div class="container">
+
+<div class="events-row">
+
+<div class="event-box">
+<img src="doorbook.jpg">
+<p class="caption">Door Book Cover !!</p>
+</div>
+
+<div class="event-box">
+<img src="booklandia.png">
+<p class="caption">Booklandia !!</p>
+</div>
+
+<div class="event-box">
+<img src="vpop.jpg">
+<p class="caption">VPOP !!</p>
+</div>
+
+</div>
+
+</div>
+
+<br><br>
+<hr color="white">
+<hr color="white">
+
+<h1>Q4 LESSONS</h1>
+
+<div class="container">
+
+<div class="lesson-row">
+
+<!-- LESSON 1 -->
+<div class="lesson-box">
+<h3>Lesson 1</h3>
+
+<button class="btn" onclick="toggle('l1code')">Text Coding</button>
+<img class="lesson-img" id="l1code" src="browser4.1.png">
+
+<button class="btn" onclick="toggle('l1browser')">Browser Output</button>
+
+<div class="lesson-img" id="l1browser">
+<img src="browser4.11.png" style="width:100%; border-radius:6px;">
+<p class="caption">Initial</p>
+
+<img src="browser4.111.png" style="width:100%; border-radius:6px;">
+<p class="caption">After Interaction</p>
+</div>
+
+</div>
+
+<!-- LESSON 2 -->
+<div class="lesson-box">
+<h3>Lesson 2</h3>
+
+<button class="btn" onclick="toggle('l2code')">Text Coding</button>
+<img class="lesson-img" id="l2code" src="browser4.2.png">
+
+<button class="btn" onclick="toggle('l2browser')">Browser Output</button>
+
+<div class="lesson-img" id="l2browser">
+<img src="browser4.22.png" style="width:100%; border-radius:6px;">
+<p class="caption">Initial</p>
+
+<img src="browser4.222.png" style="width:100%; border-radius:6px;">
+<p class="caption">After Interaction</p>
+</div>
+
+</div>
+
+</div>
+
+<br><br>
+
+<div class="lesson-row">
+
+<!-- LESSON 3 -->
+<div class="lesson-box">
+<h3>Lesson 3</h3>
+
+<button class="btn" onclick="toggle('l3code')">Text Coding</button>
+<img class="lesson-img" id="l3code" src="browser4.3.png">
+
+<button class="btn" onclick="toggle('l3browser')">Browser Output</button>
+<img class="lesson-img" id="l3browser" src="browser4.33.png">
+
+</div>
+
+<!-- LESSON 4 -->
+<div class="lesson-box">
+<h3>Lesson 4</h3>
+
+<button class="btn" onclick="toggle('l4code')">Text Coding</button>
+<img class="lesson-img" id="l4code" src="browser4.4.png">
+
+<button class="btn" onclick="toggle('l4browser')">Browser Output</button>
+
+<div class="lesson-img" id="l4browser">
+<img src="browser4.44.png" style="width:100%; border-radius:6px;">
+<p class="caption">Initial</p>
+
+<img src="browser4.444.png" style="width:100%; border-radius:6px;">
+<p class="caption">After Interaction</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<h1>Documentations / Events</h1>
+
+<div class="container">
+
+<div class="events-row">
+
+<div class="event-box">
+<img src="botb.jpg">
+<p class="caption">Battle of the Bands !!</p>
+</div>
+
+<div class="event-box">
+<img src="folkdance.jpg">
+<p class="caption">Folk Dance !!</p>
+</div>
+
+<div class="event-box">
+<img src="streetdance.jpg">
+<p class="caption">Street Dance !!</p>
+</div>
+
+</div>
+
+</div>
+
+<h1>NOLI ME TANGERE</h1>
+
+<div class="container">
+
+<div class="noli-section">
+
+<!-- LEFT SIDE (VIDEO) -->
+<div class="video-area">
+
+<video width="100%" controls>
+  <source src="IBARRA_Himig ng Himagsikan.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<p class="ps" onclick="showNote()">PS: [click]</p>
+<p id="note" class="note">Video embedded locally because the file was downloaded. If unavailable, please access the YouTube link! </p>
+
+</div>
+
+<!-- RIGHT SIDE (LINKS) -->
+<div class="links-area">
+
+<h3>YOUTUBE LINK ACCESS</h3>
+
+<a href="https://youtu.be/Z8vosFU6Jo4?si=l1y6s2XKOt-CYZ0j" class="access-link"> ☆ YOUTUBE: 
+Ibarra Himig ng Himagsikan (Noli Me Tangere Musical Play of 9 Fairness '25 - '26)</a><br>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function toggle(id){
+let img=document.getElementById(id);
+
+if(img.style.display==="block"){
+img.style.display="none";
+}
+else{
+img.style.display="block";
+}
+}
+
+function showNote(){
+let note=document.getElementById("note");
+
+if(note.style.display==="block"){
+note.style.display="none";
+}
+else{
+note.style.display="block";
+}
+}
+
+</script>
+
+</body>
+</html>

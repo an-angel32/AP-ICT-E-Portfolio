@@ -1,0 +1,66 @@
+<html>
+<head><title>ICT-TLE</title></head>
+<body style="background-color:#FFD7AB;">
+
+<h1 style="text-align:center; background-color:#322759; color:white; padding:10px;">ICT-TLE</h1>
+<hr style="border: 3px solid #322759; width:80%; margin:auto;">
+
+<hr style="border: 3px solid #322759; width:80%; margin:auto;">
+<h1 style="text-align:center; color:#596dbc;">BROWSER OUTPUTS</h1>
+<hr style="border: 3px solid #322759; width:80%; margin:auto;">
+
+<p style="text-align:center; font-size:25px; border: 4px solid #BE7597; padding:10px;">
+<img src="BROWSER2.jpg" style="border: 4px solid #BE7597; width:650px; margin:0 5px;">
+<img src="BROWSER22.jpg" style="border: 4px solid #BE7597; width:650px; margin:0 5px;">
+</p>
+
+<p style="text-align:center; font-size:25px; border: 4px solid #BE7597; padding:10px;">
+In our 2ND LESSON, we were taught about the 3 types of stylesheets. The output shown above is an example of an EMBEDDED STYLESHEET
+</p>
+
+<hr style="border: 3px solid #322759; width:80%; margin:auto;">
+
+<p style="text-align:center; font-size:25px; border: 4px solid #BE7597; padding:10px;">
+<img src="BROWSER331.jpg" style="border: 4px solid #BE7597; width:650px; margin:0 5px;">
+<img src="BROWSER33.jpg" style="border: 4px solid #BE7597; width:650px; margin:0 5px;">
+</p>
+
+<p style="text-align:center; font-size:25px; border: 4px solid #BE7597; padding:10px;">
+In our 3RD LESSON, we learned about how to use the &lt;DIV&gt; element and the CLASS attribute.
+</p>
+
+<hr style="border: 3px solid #322759; width:80%; margin:auto;">
+
+<p style="text-align:center; font-size:25px; border: 4px solid #BE7597; padding:10px;">
+<img src="BROWSER4.jpg" style="border: 4px solid #BE7597; width:650px; margin:0 5px;">
+<img src="BROWSER44.jpg" style="border: 4px solid #BE7597; width:650px; margin:0 5px;">
+</p>
+
+<p style="text-align:center; font-size:25px; border: 4px solid #BE7597; padding:10px;">
+For this output showing what I learned during our 4TH LESSON, I used a class selector .highlight in the &lt;style&gt tag inside &lt;head&gt to style only specific paragraphs. This shows how embedded CSS lets you style multiple elements directly within the same HTML file, without needing a separate CSS file.
+</p>
+
+<hr style="border: 3px solid #322759; width:80%; margin:auto;">
+
+<p style="text-align:center; font-size:25px; border: 4px solid #BE7597; padding:10px;">
+<img src="BROWSER5.jpg" style="border: 4px solid #BE7597; width:650px; margin:0 5px;">
+<img src="BROWSER55.jpg" style="border: 4px solid #BE7597; width:650px; margin:0 5px;">
+</p>
+
+<p style="text-align:center; font-size:25px; border: 4px solid #BE7597; padding:10px;">
+For our 5TH LESSON, I used an ID selector #special to style only one specific paragraph (Pizza). Unlike classes, IDs are unique, so this lets you apply styles to a single element without affecting others.
+</p>
+
+<hr style="border: 3px solid #322759; width:80%; margin:auto;">
+
+<p style="text-align:center; font-size:25px; border: 4px solid #BE7597; padding:10px;">
+<img src="BROWSER66.jpg" style="border: 4px solid #BE7597; width:650px; margin:0 5px;">
+<img src="BROWSER6.jpg" style="border: 4px solid #BE7597; width:650px; margin:0 5px;">
+</p>
+
+<p style="text-align:center; font-size:25px; border: 4px solid #BE7597; padding:10px;">
+By reading our 6TH LESSON's lecture, I learned how to use visibility:hidden on a &lt;span&gt to hide the element without removing its space in the layout. This is different from display:none, which completely removes the element.
+</p>
+
+</body>
+</html>
