@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head><title> Q4 ARALING PANLIPUNAN </title></head>
+
+<body>
+
+<!-- LESSON 1  -->
+
+<h2 style="text-align:center; color:white;">PAMBANSANG KAUNLARAN</h2>
+
+<dl style="border:5px solid #fb9e32; color:white; margin:20px;">
+<dd style="background-color:#d26059; padding:15px; text-align:justify;">
+Isang estado ng bansa kung saan tinatamasa ng mga tao mula sa pinakamababang uri ng mamamayan 
+ang nakakamanghang pagbabago sa ekonomiya at pamumuhay.
+</dd>
+</dl>
+
+<!-- TWO COLUMN LAYOUT -->
+<div style="width:100%; overflow:hidden;">
+
+<!-- LEFT BOX : MGA KONSEPTO -->
+<div style="width:45%; float:left; margin:20px; border:5px solid #fb9e32; color:white;">
+
+<div style="background-color:#fbc86d; border-bottom:5px solid #fb9e32; font-size:35px; text-align:center;">
+MGA KONSEPTO NG PAMBANSANG KAUNLARAN
+</div>
+
+<div style="background-color:#d26059; padding:15px;">
+
+<p onclick="toggle('pagbabago')" style="cursor:pointer;"><b>1. Pagbabago</b></p>
+<div id="pagbabago" style="display:none;">
+• Paraan upang maging iba o naiiba <br>
+• Proseso ng pag-iiba o pagkakaroon ng kaibahan sa lipunan at ekonomiya
+</div>
+
+<p onclick="toggle('pagunlad')" style="cursor:pointer;"><b>2. Pag-unlad</b></p>
+<div id="pagunlad" style="display:none;">
+• Pagbabago mula sa mababa tungo sa mataas na antas ng pamumuhay <br>
+• Pag-angat, pagsulong, o paglago sa pangkalahatang aspeto ng pamumuhay <br>
+• Isang progresibo at aktibong proseso at ang pagsulong ay produkto nito (Fajardo) <br>
+• Ang kaunlaran ay matatamo lamang kung mapauunlad ang yaman ng buhay ng mga tao kaysa sa yaman ng ekonomiya nito (Amartya Sen)
+</div>
+
+<p onclick="toggle('pagsulong')" style="cursor:pointer;"><b>3. Pagsulong</b></p>
+<div id="pagsulong" style="display:none;">
+• Pag-usad tungo sa iyong layunin o goal <br>
+• Pagpapaunlad ng kakayahan, kaalaman, at abilidad upang makasabay sa agos ng buhay
+</div>
+
+<p onclick="toggle('ebolusyon')" style="cursor:pointer;"><b>4. Ebolusyon</b></p>
+<div id="ebolusyon" style="display:none;">
+• Pagbabago sa mga katangian sa loob ng mahabang panahon <br>
+• Anuman ang unang dumating ay mas mabuti sa sinundang panahon
+</div>
+
+</div>
+</div>
+
+
+<!-- RIGHT BOX : TABLE -->
+<div style="width:45%; float:right; margin:20px;">
+
+<table border="1" cellspacing="0" cellpadding="10" style="width:100%; border-collapse:collapse; background-color:white; font-size:25px;">
+<tr style="background-color:#fbc86d;">
+<th colspan="2">DALAWANG KONSEPTO NG PAG-UNLAD<br>(Todaro & Smith, 2012)</th>
+</tr>
+
+<tr>
+<td style="width:35%;"><b>Tradisyunal</b></td>
+<td>Pagtamo ng patuloy na pagtaas ng income per capita.</td>
+</tr>
+
+<tr>
+<td><b>Makabago</b></td>
+<td>Dapat na kumakatawan sa malawakang pagbabago sa buong sistemang panlipunan.</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<br style="clear:both;">
+
+</body>
+</html>

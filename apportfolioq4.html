@@ -1,0 +1,2595 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Q4 ARALING PANLIPUNAN</title>
+
+<style>
+
+body{
+background-color:#0C2C55;
+color:#EDEDCE;
+font-family:Arial, sans-serif;
+font-size:25px;
+margin:40px;
+}
+
+/* TITLES */
+
+h2{
+text-align:center;
+font-size:40px;
+}
+
+.lesson-title{
+text-align:center;
+font-size:40px;
+margin-top:60px;
+}
+
+/* DESCRIPTION */
+
+.description{
+border:4px solid #296374;
+background:#629FAD;
+padding:20px;
+margin-top:20px;
+text-align:justify;
+}
+
+/* ROW LAYOUT */
+
+.row{
+display:flex;
+gap:30px;
+margin-top:30px;
+align-items:flex-start;
+}
+
+/* BOXES */
+
+.left-box{
+width:60%;
+border:4px solid #296374;
+background:#629FAD;
+box-shadow:4px 4px 10px #296374;
+}
+
+.right-box{
+width:35%;
+border:4px solid #296374;
+background:#629FAD;
+box-shadow:4px 4px 10px #296374;
+padding:15px;
+}
+
+.box-title{
+font-size:32px;
+text-align:center;
+padding:15px;
+border-bottom:4px solid #296374;
+font-weight:bold;
+}
+
+.box-content.scrollable{
+  max-height:200px;
+  overflow-y:auto;
+  padding:10px;
+}
+
+/* CLICKABLE TEXT */
+
+.concept{
+cursor:pointer;
+margin-top:10px;
+}
+
+.concept:hover{
+text-decoration:underline;
+}
+
+.hidden{
+display:none;
+margin-bottom:10px;
+}
+
+/* TABLE */
+
+table{
+width:100%;
+border-collapse:collapse;
+background:#EDEDCE;
+color:black;
+font-size:25px;
+}
+
+th{
+background:#629FAD;
+padding:15px;
+font-size:32px;
+}
+
+td{
+border:2px solid #296374;
+padding:15px;
+}
+
+/* IMAGE HEADER */
+
+.header-image img{
+width:100%;
+height:250px;
+object-fit: cover;
+border:4px solid #296374;
+box-shadow:4px 4px 10px #296374;
+}
+
+/* SECTION */
+
+.section-title{
+font-size:40px;
+margin-top:40px;
+}
+
+.note{
+font-size:18px;
+opacity:0.8;
+}
+
+/* TOPIC LIST */
+
+.topic{
+font-size:32px;
+cursor:pointer;
+margin:15px 0;
+}
+
+.topic:hover{
+text-decoration:underline;
+}
+
+.info-box{
+display:none;
+background:#629FAD;
+border:4px solid #296374;
+padding:20px;
+margin-top:10px;
+box-shadow:4px 4px 10px #296374;
+text-align:justify;
+}
+
+/* CENTER IMAGE */
+
+.center-image{
+text-align:center;
+margin-top:20px;
+}
+
+.center-image img{
+width:550px;
+border:4px solid #296374;
+box-shadow:4px 4px 10px #296374;
+cursor:pointer;
+}
+
+.caption{
+font-size:18px;
+margin-top:6px;
+}
+
+/* AGRI LAYOUT */
+
+.agri-layout{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:40px;
+}
+
+/* AGRI BOX */
+
+.agri-box{
+width:420px;
+background:#629FAD;
+border:4px solid #296374;
+padding:20px;
+box-shadow:4px 4px 10px #296374;
+text-align:justify;
+}
+
+/* SLIDE START */
+
+.left-slide{
+transform:translateX(-120%);
+opacity:0;
+transition:0.7s;
+}
+
+.right-slide{
+transform:translateX(120%);
+opacity:0;
+transition:0.7s;
+}
+
+/* ACTIVE */
+
+.show-left{
+transform:translateX(0);
+opacity:1;
+}
+
+.show-right{
+transform:translateX(0);
+opacity:1;
+}
+
+/* TERM ROW */
+
+.term-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:15px;
+}
+
+/* BUTTON */
+
+.def-btn{
+background:#296374;
+color:white;
+border:none;
+padding:6px 12px;
+cursor:pointer;
+}
+
+.def-btn:hover{
+opacity:0.8;
+}
+
+/* DEFINITION */
+
+.definition{
+display:none;
+margin-top:8px;
+text-align:justify;
+}
+
+/* AGRI IMPORTANCE + PROBLEMS SECTION */
+
+.agri2-row{
+display:flex;
+gap:40px;
+margin-top:50px;
+align-items:flex-start;
+}
+
+/* LEFT: SULIRANIN GRID */
+
+.problem-box{
+width:50%;
+background:#629FAD;
+border:4px solid #296374;
+box-shadow:4px 4px 10px #296374;
+padding:20px;
+}
+
+.problem-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.problem-card img{
+width:100%;
+height:100%;
+object-fit:contain;
+background:#EDEDCE;
+}
+
+.problem-content{
+display:none;
+padding:12px 16px;
+color:black;
+font-size:19px;
+text-align:justify;
+height:100%;
+overflow-y:auto;
+line-height:1.4;
+}
+
+.problem-term{
+font-weight:bold;
+font-size:24px;
+margin-bottom:8px;
+}
+
+/* RIGHT: IMPORTANCE */
+
+.importance-box{
+width:50%;
+background:#629FAD;
+border:4px solid #296374;
+box-shadow:4px 4px 10px #296374;
+padding:20px;
+}
+
+.reveal-item{
+margin:25px 0;
+}
+
+.reveal-btn{
+background:#296374;
+color:white;
+border:none;
+padding:8px 16px;
+cursor:pointer;
+font-size:18px;
+}
+
+.reveal-btn:hover{
+opacity:0.8;
+}
+
+.reveal-text{
+display:none;
+margin-top:10px;
+background:#EDEDCE;
+color:black;
+padding:12px;
+border:2px solid #296374;
+font-size:15px;
+}
+
+.policy-box{
+  background:#629FAD;
+  border:4px solid #296374;
+  box-shadow:4px 4px 10px #296374;
+  padding:15px;
+  height:300px;
+  overflow-y:auto;
+}
+
+.scrollable{
+  max-height:220px;
+  overflow-y:auto;
+}
+
+.term-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:8px;
+}
+
+.def-btn{
+  background:#296374;
+  color:white;
+  border:none;
+  padding:5px 10px;
+  cursor:pointer;
+}
+
+.def-btn:hover{
+  opacity:0.8;
+}
+
+.definition{
+  display:none;
+  margin-top:6px;
+  text-align:justify;
+}
+
+/* Industry layout */
+.industry-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* allows boxes to wrap on smaller screens */
+  margin-top: 30px;
+}
+
+/* Industry boxes */
+.industry-box {
+  flex: 1; /* lets boxes adjust width automatically */
+  min-width: 250px; /* prevents boxes from getting too small */
+  background: #629FAD;
+  border: 4px solid #296374;
+  padding: 20px;
+  box-shadow: 4px 4px 10px #296374;
+  text-align: justify;
+}
+
+/* INDUSTRY INFO LAYOUT */
+
+.industry-info-row{
+display:flex;
+gap:30px;
+margin-top:40px;
+align-items:flex-start;
+}
+
+/* LEFT SIDE */
+
+.industry-left{
+width:50%;
+}
+
+.reveal-box{
+background:#629FAD;
+border:4px solid #296374;
+box-shadow:4px 4px 10px #296374;
+padding:25px;
+text-align:center;
+cursor:pointer;
+font-size:28px;
+margin-bottom:15px;
+}
+
+.reveal-content{
+display:none;
+background:#629FAD;
+border:4px solid #296374;
+padding:20px;
+box-shadow:4px 4px 10px #296374;
+text-align:justify;
+}
+
+/* RIGHT SIDE */
+
+.industry-right{
+width:50%;
+}
+
+/* HORIZONTAL POLICY SCROLL */
+
+/* ROW FOR ECONOMIC POLICIES */
+
+.policy-section{
+margin-top:30px;
+}
+
+.policy-wrapper{
+position:relative;
+border:4px solid #296374;
+background:#629FAD;
+box-shadow:4px 4px 10px #296374;
+padding:20px;
+overflow:hidden;
+}
+
+.policy-row{
+display:none;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+}
+
+.policy-row.active{
+display:grid;
+}
+
+.policy-card{
+background:#EDEDCE;
+border:3px solid #296374;
+padding:12px;
+text-align:center;
+}
+
+.policy-law{
+font-weight:bold;
+cursor:pointer;
+margin-bottom:8px;
+background:#296374;
+color:white;
+padding:5px;
+}
+
+.policy-content{
+display:none;
+font-size:14px;
+line-height:1.3;
+color:#0C2C55;
+}
+
+.policy-nav{
+margin-top:10px;
+display:flex;
+justify-content:space-between;
+}
+
+.policy-btn{
+background:#296374;
+color:white;
+border:none;
+padding:6px 14px;
+cursor:pointer;
+}
+.policy-scroll{
+display:flex;
+gap:15px;
+overflow-x:auto;
+padding:15px;
+border:4px solid #296374;
+background:#629FAD;
+box-shadow:4px 4px 10px #296374;
+}
+
+.policy-card{
+min-width:230px;
+max-width:230px;
+background:#EDEDCE;
+border:3px solid #296374;
+padding:10px;
+flex-shrink:0;
+}
+.policy-title{
+font-weight:bold;
+margin-bottom:6px;
+}
+
+/* SECOND ROW */
+
+.industry-bottom{
+display:flex;
+gap:25px;
+margin-top:30px;
+align-items:flex-start;
+}
+
+/* LEFT SIDE */
+
+.left-info{
+width:50%;
+}
+
+.reveal-box{
+background:#629FAD;
+border:4px solid #296374;
+padding:18px;
+text-align:center;
+cursor:pointer;
+font-size:20px;
+margin-bottom:10px;
+box-shadow:4px 4px 10px #296374;
+}
+
+.reveal-content{
+display:none;
+background:#629FAD;
+border:4px solid #296374;
+padding:15px;
+font-size:15px;
+line-height:1.4;
+}
+
+/* RIGHT SIDE */
+
+.right-table{
+width:50%;
+}
+
+.right-table table{
+width:100%;
+border-collapse:collapse;
+font-size:15px;
+}
+
+.right-table th,
+.right-table td{
+border:3px solid #296374;
+padding:8px;
+background:#EDEDCE;
+color:black;
+}
+
+/* SERVICE IMAGE */
+
+.service-image img{
+width:100%;
+height:280px;
+object-fit:cover;
+cursor:pointer;
+border:4px solid #296374;
+box-shadow:4px 4px 10px #296374;
+}
+
+.service-def{
+display:none;
+margin-top:10px;
+padding:15px;
+background:#629FAD;
+border:4px solid #296374;
+color:#0C2C55;
+}
+
+/* TWO COLUMN LAYOUT */
+
+.service-row{
+display:flex;
+gap:30px;
+margin-top:30px;
+}
+
+.service-left{
+width:50%;
+}
+
+.service-right{
+width:50%;
+}
+
+/* TERM STACK */
+
+.term-box{
+background:#629FAD;
+border:3px solid #296374;
+padding:12px;
+margin-bottom:10px;
+cursor:pointer;
+color:#0C2C55;
+}
+
+.term-def{
+display:none;
+margin-top:6px;
+font-size:14px;
+color: #0C2C55;
+}
+
+/* KAHALAGAHAN TABLE */
+
+.service-right table{
+width:100%;
+border-collapse:collapse;
+}
+
+.service-right th,
+.service-right td{
+border:3px solid #296374;
+padding:8px;
+background:#EDEDCE;
+color:#0C2C55;
+}
+
+/* CARD SECTION (for agencies and laws) */
+
+.card-section{
+margin-top:30px;
+}
+
+.card-wrapper{
+border:4px solid #296374;
+background:#629FAD;
+padding:15px;
+box-shadow:4px 4px 10px #296374;
+}
+
+.card-row{
+display:none;
+grid-template-columns:repeat(4,1fr);
+gap:12px;
+}
+
+.card-row.active{
+display:grid;
+}
+
+.card{
+background:#EDEDCE;
+border:3px solid #296374;
+padding:10px;
+text-align:center;
+color:#0C2C55;
+}
+
+.card-title{
+font-weight:bold;
+cursor:pointer;
+margin-bottom:6px;
+}
+
+.card-content{
+display:none;
+font-size:14px;
+}
+
+.card-nav{
+margin-top:10px;
+display:flex;
+justify-content:space-between;
+}
+
+.card-btn{
+background:#296374;
+color:white;
+border:none;
+padding:5px 12px;
+cursor:pointer;
+}
+
+.service-row{
+display:flex;
+gap:20px;
+margin-top:20px;
+}
+
+.service-left{
+width:50%;
+}
+
+.service-right{
+width:50%;
+}
+
+.term{
+background:#0C2C55;
+color:white;
+padding:10px;
+margin-top:8px;
+cursor:pointer;
+}
+
+.term-def{
+display:none;
+background:#f2f2f2;
+padding:10px;
+}
+
+.service-img{
+width:100%;
+height:200px;
+object-fit:cover;
+cursor:pointer;
+}
+
+.service-definition{
+display:none;
+padding:15px;
+background:#e9eef5;
+color: #0C2C55;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-bottom:15px;
+}
+
+td{
+border:1px solid #ccc;
+padding:10px;
+}
+
+.policy-scroll{
+display:flex;
+gap:10px;
+overflow-x:auto;
+}
+
+.policy-card{
+min-width:200px;
+background:#0C2C55;
+color:white;
+padding:10px;
+cursor:pointer;
+}
+
+.policy-content{
+display:none;
+margin-top:8px;
+background:white;
+color:black;
+padding:8px;
+}
+
+/* Container for the main row */
+.impormal-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* LEFT IMAGE */
+.impormal-left {
+  flex: 1;
+  text-align: center;
+}
+.impormal-left img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.impormal-definition {
+  display: none;
+  margin-top: 10px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  color: #0C2C55;
+  text-align:justify;
+}
+
+/* RIGHT TERMS */
+.impormal-right {
+  flex: 1;
+}
+.term {
+  background-color: #0C2C55;
+  color: white;
+  padding: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.term-content {
+  display: none;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  color: #0C2C55; /* explicitly dark text */
+}
+/* BOTTOM SCROLLABLE CARDS */
+.policy-section {
+  margin-top: 30px;
+}
+.policy-section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #0C2C55;
+}
+.policy-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  padding: 10px 0;
+}
+.policy-card {
+  min-width: 250px;
+  background: #0C2C55;
+  color: white;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.policy-card:hover {
+  transform: scale(1.03);
+}
+.policy-title {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.policy-content {
+  display: none;
+  margin-top: 6px;
+  background: #EDEDCE;
+  color: #0C2C55;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.lesson-section {
+  margin: 30px;
+  font-family: Arial, sans-serif;
+}
+.lesson-title {
+  text-align: center;
+  font-size: 36px;
+  color: #0C2C55;
+  margin-bottom: 20px;
+}
+.lesson-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+
+}
+.lesson-left, .lesson-right {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+.image-box img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.quiz-box, .reveal-text {
+  margin-top: 10px;
+  padding: 10px;
+  background: #EDEDCE;
+  color: #0C2C55;
+  border-radius: 5px;
+  display: none;
+}
+button {
+  background-color: #0C2C55;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin: 6px 0;
+  cursor: pointer;
+  border-radius: 3px;
+}
+button:hover {
+  opacity: 0.8;
+}
+.drag-quiz {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.definitions .def-box {
+  border: 2px dashed #0C2C55;
+  padding: 10px;
+  margin-bottom: 6px;
+  min-height: 60px;
+background-color:#629FAD;
+}
+.options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.drag-item {
+  padding: 6px 10px;
+  background-color: #0C2C55;
+  color: white;
+  cursor: grab;
+  border-radius: 3px;
+background-color:#629FAD;
+}
+.drag-item.dragging {
+  opacity: 0.5;
+}
+
+.scroll-cards {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+.scroll-cards::-webkit-scrollbar {
+  height: 8px;
+}
+.scroll-cards::-webkit-scrollbar-thumb {
+  background: #0C2C55;
+  border-radius: 4px;
+}
+.card {
+  flex: 0 0 300px; /* fixed width so multiple fit horizontally */
+  background: #EDEDCE;
+  border-radius: 8px;
+  padding: 15px;
+  min-height: 250px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  text-align: justify; /* justify text */
+}
+.card h3 {
+  margin-top: 0;
+  color: #0C2C55;
+  text-align: center; /* keep heading centered */
+}
+.card ul {
+  padding-left: 20px;
+  margin: 0;
+}
+.card p {
+  margin: 8px 0;
+}
+.definition {
+  display: none;
+  margin-top: 5px;
+}
+.clickable {
+  cursor: pointer;
+  color: #0C2C55;
+  text-decoration: underline;
+}
+
+</style>
+</head>
+<body style="font-family:Bell MT;">
+
+<hr color="white">
+<hr color="white">
+
+<h2>PAMBANSANG KAUNLARAN</h2>
+
+<div class="description">
+Isang estado ng bansa kung saan tinatamasa ng mga tao mula sa pinakamababang uri ng mamamayan ang nakakamanghang pagbabago sa ekonomiya at pamumuhay.
+</div>
+
+<div class="row">
+
+<div class="left-box">
+
+<div class="box-title">
+MGA KONSEPTO NG PAMBANSANG KAUNLARAN
+</div>
+
+<div class="box-content">
+
+<p class="concept" onclick="toggle('pagbabago')"><b>1. Pagbabago</b></p>
+<div id="pagbabago" class="hidden">
+• Paraan upang maging iba o naiiba<br>
+• Proseso ng pag-iiba o pagkakaroon ng kaibahan sa lipunan at ekonomiya
+</div>
+
+<p class="concept" onclick="toggle('pagunlad')"><b>2. Pag-unlad</b></p>
+<div id="pagunlad" class="hidden">
+• Pagbabago mula sa mababa tungo sa mataas na antas ng pamumuhay<br>
+• Pag-angat, pagsulong, o paglago sa pangkalahatang aspeto ng pamumuhay
+</div>
+
+<p class="concept" onclick="toggle('pagsulong')"><b>3. Pagsulong</b></p>
+<div id="pagsulong" class="hidden">
+• Pag-usad tungo sa iyong layunin o goal<br>
+• Pagpapaunlad ng kakayahan, kaalaman, at abilidad
+</div>
+
+<p class="concept" onclick="toggle('ebolusyon')"><b>4. Ebolusyon</b></p>
+<div id="ebolusyon" class="hidden">
+• Pagbabago sa mga katangian sa loob ng mahabang panahon
+</div>
+
+</div>
+</div>
+
+<div class="right-box">
+
+<table>
+
+<tr>
+<th colspan="2">
+DALAWANG KONSEPTO NG PAG-UNLAD
+</th>
+</tr>
+
+<tr>
+<td><b>Tradisyunal</b></td>
+<td>Pagtamo ng patuloy na pagtaas ng income per capita.</td>
+</tr>
+
+<tr>
+<td><b>Makabago</b></td>
+<td>Malawakang pagbabago sa sistemang panlipunan.</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<hr color="white">
+
+<div class="header-image">
+<img src="develop.jpg">
+</a>
+</div>
+
+<h2 class="section-title">Tungkol sa Pambansang Kaunlaran</h2>
+<p class="note">Click for More Information</p>
+
+<div class="row">
+
+<div style="width:60%;">
+
+<p class="topic" onclick="toggle('salik')">
+> Mga Salik na Maaaring Makatulong sa Pagsulong ng Ekonomiya
+</p>
+
+<div id="salik" class="info-box">
+1. Likas na yaman<br>
+2. Yamang-tao<br>
+3. Kapital<br>
+4. Teknolohiya at Inobasyon
+</div>
+
+<p class="topic" onclick="toggle('palatandaan')">
+> Mga Palatandaan ng Pag-unlad
+</p>
+
+<div id="palatandaan" class="info-box">
+Kasaganaan, kasarinlan, sapat na serbisyong panlipunan, at katarungang panlipunan.
+</div>
+
+<p class="topic" onclick="toggle('antas')">
+> Antas ng Kaunlaran ng Bansa
+</p>
+
+<div id="antas" class="info-box">
+
+<b>Maunlad na Bansa o Developed Economies</b><br>
+Mga bansang may mataas na GDP, income per capita, at mataas na HDI.<br><br>
+
+<b>Umuunlad na Bansa o Developing Economies</b><br>
+Mga bansang may mga industriyang kasalukuyang pinauunlad ngunit wala pang mataas na antas ng industriyalisasyon. Hindi pantay ang GDP at HDI.<br><br>
+
+<b>Papaunlad na Bansa o Underdeveloped Economies</b><br>
+Mga bansang kung ihahambing sa iba ay kulang sa industriyalisasyon. Mababang antas ng agrikultura at mababang GDP, income per capita, at HDI.
+
+</div>
+
+
+<p class="topic" onclick="toggle('tungkulin')">
+> Mga Tungkulin Para sa Pagunlad ng Bansa
+</p>
+
+<div id="tungkulin" class="info-box">
+
+- Suportahan ang ating pamahalaan.<br>
+- Sundin at igalang ang batas.<br>
+- Alagaan ang ating kapaligiran.<br>
+- Tumulong sa pagpuksa sa korapsyon at katiwalian sa pamahalaan.<br>
+- Maging produktibo.<br>
+- Tangkilikin ang mga produktong Pilipino.<br>
+- Magtipid ng enerhiya.<br>
+- Makilahok sa mga gawaing pansibiko.
+
+</div>
+
+
+<p class="topic" onclick="toggle('gampanin')">
+> Mga Gampanin ng mga Mamamayan sa Pagunlad ng Bansa
+</p>
+
+<div id="gampanin" class="info-box">
+
+<b>Mapanagutan</b><br>
+- Tamang pagbabayad ng buwis<br>
+- Makialam<br><br>
+
+<b>Maabilidad</b><br>
+- Bumuo o sumali sa kooperatiba<br>
+- Pagnenegosyo<br><br>
+
+<b>Maalam</b><br>
+- Tamang pagboto<br>
+- Pagpapatupad at pakikilahok sa mga proyektong pangkaunlaran sa komunidad<br><br>
+
+<b>Makabansa</b><br>
+- Pakikilahok sa pamamahala ng bansa (participative governance)<br>
+- Pagtangkilik sa mga produktong Pilipino
+
+</div>
+
+</div>
+
+<div class="right-box">
+
+<div class="box-title">
+Sukatan ng Kaunlaran ayon sa United Nations
+</div>
+
+<div class="box-content">
+
+Ginagamit ang Human Development Index (HDI) bilang panukat sa kaunlaran ng bansa.
+
+<br><br>
+
+<b>HDI</b> – sukat ng kalusugan, edukasyon, at antas ng pamumuhay.
+
+</div>
+
+</div>
+
+</div>
+
+<hr color="white">
+<hr color="white">
+
+<h2 class="lesson-title">SEKTOR NG AGRIKULTURA</h2>
+
+<div class="center-image">
+
+<img src="agriculture.jpg"
+onclick="showAgri()">
+
+<div class="caption">Click on the Image</div>
+
+</div>
+
+<div class="agri-layout">
+
+<div id="agriLeft" class="agri-box left-slide">
+
+<h3>AGRIKULTURA</h3>
+
+Isang agham at sining na may kinalaman sa pagpaparami ng hayop at halaman.
+
+<br><br>
+> Saan galing ang salitang AGRIKULTURA?
+
+<br><br>
+
+<button class="def-btn" onclick="showAnswer()">Show Answer</button>
+
+<div id="quizAnswer" class="definition">
+AGER = Lupa<br>
+CULTURA = Paglilinang
+</div>
+
+</div>
+
+<div id="agriRight" class="agri-box right-slide">
+
+<h3>MGA GAWAIN SA SEKTOR NG AGRIKULTURA</h3>
+
+<div class="term-row">
+<b>Pagsasaka</b>
+<button class="def-btn" onclick="toggle('p1')">Check Definition</button>
+</div>
+
+<div id="p1" class="definition">
+Mga pangunahing pananim tulad ng palay, mais, niyog, at saging.
+</div>
+
+<div class="term-row">
+<b>Pangingisda</b>
+<button class="def-btn" onclick="toggle('p2')">Check Definition</button>
+</div>
+
+<div id="p2" class="definition">
+Komersiyal, munisipal, at aquaculture.
+</div>
+
+<div class="term-row">
+<b>Paghahayupan</b>
+<button class="def-btn" onclick="toggle('p3')">Check Definition</button>
+</div>
+
+<div id="p3" class="definition">
+May kinalaman sa mga hayop na itinaas para sa karne, hibla, gatas, itlog, atbp.<br><br>
+Kasama rito ang pang-araw-araw na pangangalaga, pagpili ng pag-aanak at pagpapalaki ng mga hayop.
+</div>
+
+
+<div class="term-row">
+<b>Paggugubat / Pagtotroso</b>
+<button class="def-btn" onclick="toggle('p4')">Check Definition</button>
+</div>
+
+<div id="p4" class="definition">
+Patuloy na nililinang ang ating mga kagubatan bagamat tayo ay nahaharap sa suliranin ng pagkaubos ng mga yaman nito.<br><br>
+
+Pinagkukunan ng plywood, tabla, troso, at veneer.<br><br>
+
+Pinagkakakitaan din ang rattan, nipa, anahaw, kawayan, atbp.
+</div>
+
+</div>
+
+</div>
+
+
+<hr color="white">
+
+<h2>KAHALAGAHAN AT SULIRANIN NG AGRIKULTURA</h2>
+
+<div class="agri2-row">
+
+<!-- LEFT : SULIRANIN -->
+
+<div class="problem-box">
+
+<div class="box-title">
+SULIRANIN NG AGRIKULTURA
+</div>
+<p style="font-size:10px;"> Click the Images </p>
+
+<div class="problem-grid">
+
+<!-- PAGSASAKA -->
+
+<div class="problem-card" onclick="showProblem(this)">
+<img src="pagsasaka.webp">
+
+<div class="problem-content">
+
+<div class="problem-term">Pagsasaka</div>
+
+• Pagliit ng lupang sakahan<br>
+• Paggamit ng makabagong teknolohiya<br>
+• Kakulangan ng mga pasilidad at imprastraktura sa kabukiran<br>
+• Kakulangan ng suporta mula sa iba pang sektor<br>
+• Pagbibigay prayoridad sa sektor ng industriya<br>
+• Pagdagsa ng dayuhang kalakal at Climate Change <br>
+
+
+</div>
+</div>
+
+
+<!-- PANGINGISDA -->
+
+<div class="problem-card" onclick="showProblem(this)">
+<img src="pangingisda.jpg">
+
+<div class="problem-content">
+
+<div class="problem-term">Pangingisda</div>
+
+• Mapanirang operasyon ng malalaking komersiyal na mangingisda<br>
+• Epekto ng polusyon sa pangisdaan<br>
+• Lumalaking populasyon ng bansa<br>
+• Kahirapan sa hanay ng mga mangingisda
+
+</div>
+
+</div>
+
+
+<!-- PAGHAHAYUPAN -->
+
+<div class="problem-card" onclick="showProblem(this)">
+<img src="panghahayupan.jpg">
+
+<div class="problem-content">
+
+<div class="problem-term">Paghahayupan</div>
+
+• Pagkakaroon ng mga peste sa alagang hayop tulad ng baboy at manok
+
+</div>
+
+</div>
+
+
+<!-- PAGGUGUBAT -->
+
+<div class="problem-card" onclick="showProblem(this)">
+<img src="paggugubat.jpg">
+
+<div class="problem-content">
+
+<div class="problem-term">Paggugubat</div>
+
+• Mabilis na pagkaubos ng mga likas na yaman
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- RIGHT : KAHALAGAHAN -->
+
+<div class="importance-box">
+
+<div class="box-title">
+KAHALAGAHAN NG AGRIKULTURA
+</div>
+
+<div class="reveal-item">
+<button class="reveal-btn" onclick="reveal('k1')">Reveal!</button>
+<div id="k1" class="reveal-text">
+Pinagmumulan ng pagkain
+</div>
+</div>
+
+<div class="reveal-item">
+<button class="reveal-btn" onclick="reveal('k2')">Reveal!</button>
+<div id="k2" class="reveal-text">
+Pinagkukunan ng hilaw na materyales upang makabuo ng panibagong produkto
+</div>
+</div>
+
+<div class="reveal-item">
+<button class="reveal-btn" onclick="reveal('k3')">Reveal!</button>
+<div id="k3" class="reveal-text">
+Nagkakaloob ng trabaho sa maraming Pilipino
+</div>
+</div>
+
+<div class="reveal-item">
+<button class="reveal-btn" onclick="reveal('k4')">Reveal!</button>
+<div id="k4" class="reveal-text">
+Nagpapasok ng dolyar sa ating bansa
+</div>
+</div>
+
+<div class="reveal-item">
+<button class="reveal-btn" onclick="reveal('k5')">Reveal!</button>
+<div id="k5" class="reveal-text">
+Pinagkukunan ng sobrang manggagawa patungo sa ibang sektor ng ekonomiya
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- MGA PATAKARAN AT PROGRAMA -->
+<h2 class="section-title">MGA PATAKARAN AT PROGRAMA HINGGIL SA PAGPAPAUNLAD SA SEKTOR NG AGRIKULTURA</h2>
+
+<!-- HISTORICAL PERIOD BOXES -->
+<div class="row" style="margin-top:30px; gap:20px;">
+<div class="policy-box">
+<div class="box-title">PANAHON NA HINDI PA NASASAKOP ANG PILIPINAS</div>
+ <div class="box-content scrollable">
+<p><b>Pagmamay-ari ng lupa:</b> Ang mga sinaunang Pilipino ay nakakapag-may-ari ng lupa sa pamamagitan ng pagiging unang nagtayo ng bahay.</p>
+<p>Wala pang titulo/rights noon.</p>
+<p>Pinagbabasehan lamang ang salita ng bawat isa.</p>
+</div>
+</div>
+
+<div class="policy-box">
+<div class="box-title">PANAHON NG KASTILA</div>
+<div class="box-content scrollable">
+<p><b>Encomienda System:</b> Lupang gantimpala sa matapat na naglilingkod sa hari ng Espanya at mga taong tumulong sa pananakop sa Pilipinas.</p>
+</div>
+</div>
+
+<div class="policy-box">
+<div class="box-title">PANAHON NG AMERIKANO</div>
+<div class="box-content scrollable">
+<p><b>Land Registration Act 1902:</b> Nagkaroon ng mga titulo dahil dito. Sistemang Torrens, kung saan ang mga titulo ng lupa ay ipinatalang lahat.</p>
+<p><b>Public Land Act 1902:</b> Pamamahagi ng mga lupaing pampubliko sa mga pamilya na nagbubungkal ng lupa.</p>
+ <p>Binili ng Amerika ang 160,000 hectares mula sa mga prayle para sa mga magsasaka.</p>
+ </div>
+ </div>
+
+<div class="policy-box">
+<div class="box-title">PANAHON NG KASARINLAN</div>
+ <div class="box-content scrollable">
+ <p><b>Batas Republika Blg. 1160:</b> Nagtatag sa NARRA.</p>
+ <p><b>Batas Republika Blg. 1190 ng 1954:</b> Proteksyon laban sa mapang-abuso na may-ari ng lupa (Absentee Landlord).</p>
+ <p><b>Agricultural Land Reform Code 1963:</b> Nilagdaan ni Diosdado Macapagal. Nagpalaya sa mabigat na trabaho ng magsasaka.</p>
+ <p><b>Atas ng Pangulo Blg. 2, 1972:</b> Isailalim sa reporma sa lupa ang buong Pilipinas (Panahon ni Marcos).</p>
+  <p><b>Atas ng Pangulo Blg. 27:</b> Bibilhin ng pamahalaan ang lupang taniman ng palay/mais >7 ektarya at ipamamahagi sa mga magsasakang walang lupa.</p>
+  <p><b>Batas Republika Blg. 6657, 1988 (CARL):</b> Comprehensive Agrarian Reform Law ni Corazon Aquino. Lahat ng lupang agrikultural sa CARP.</p>
+ </div>
+ </div>
+</div>
+
+<!-- LEFT: CARP Programs and Exclusions -->
+<div class="row" style="margin-top:40px; gap:20px;">
+<div class="policy-box" style="width:48%;">
+<div class="box-title">MGA NAISAKATUPARAN UPANG MAIANGAT ANG KALAGAYANG PANGKABUHAYAN NG MGA MAGSASAKA (CARP, 2003)</div>
+<div class="box-content scrollable">
+<ul>
+ <li>Pagtatayo ng bahay-ugnayan (bagsakan) para sa mga magsasaka</li>
+ <li>Pagtatayo ng gulayan para sa mga magsasaka</li>
+<li>Pangulong Diosdado Macapagal Agrarian Reform Scholarship Program para sa anak ng magsasaka</li>
+<li>Kalahi agrarian reform zones</li>
+</ul>
+  <hr>
+ <b>Hindi sakop ng CARP:</b>
+ <ul>
+ <li>Liwasan at parke</li>
+ <li>Mga gubat at reforestation area</li>
+  <li>Mga palaisdaan</li>
+  <li>Tanggulang pambansa</li>
+  <li>Paaralan</li>
+  <li>Simbahan/Sementeryo/Templyo</li>
+  <li>Watershed, atbp.</li>
+  </ul>
+  </div>
+  </div>
+
+  <!-- RIGHT: Fisheries, Forest, Landbank, Agencies -->
+  <div class="policy-box" style="width:48%;">
+  <div class="box-title">PANGINGISDA</div>
+  <div class="box-content scrollable">
+  <div class="term-row">
+  <b>Pagtatayo ng mga daungan</b>
+  <button class="def-btn" onclick="toggle('fish1')">Definition</button>
+   </div>
+  <div id="fish1" class="definition">
+  Pagpapaunlad at pagpapatatag ng pantay na operasyon sa pangingisda.
+  </div>
+
+  <div class="term-row">
+  <b>Philippine Fisheries Code of 1998</b>
+   <button class="def-btn" onclick="toggle('fish2')">Definition</button>
+  </div>
+  <div id="fish2" class="definition">
+  Paglilimita ng pamahalaan at naglalayon ng wastong paggamit sa yamang pangisdaan.
+  </div>
+
+  <div class="term-row">
+   <b>Fishery Research</b>
+   <button class="def-btn" onclick="toggle('fish3')">Definition</button>
+   </div>
+  <div id="fish3" class="definition">
+   Isang programa ng pamahalaan upang masiguro ang pagpaparami at pagpapayaman sa yamang-tubig.
+   </div>
+
+<hr>
+<div class="box-title">PAGTOTROSO</div>
+<div class="box-content scrollable">
+  <div class="term-row">
+  <b>Community Livelihood Assistance Program (CLASP)</b>
+ <button class="def-btn" onclick="toggle('t1')">Definition</button>
+ </div>
+  <div id="t1" class="definition">
+    Paglilipat ng teknolohiya/pagtuturo sa mga mamamayan ng wastong paglinang sa mga likas na yaman.
+   </div>
+
+        <div class="term-row">
+          <b>National Integrated Protected Areas System (NIPAS)</b>
+          <button class="def-btn" onclick="toggle('t2')">Definition</button>
+        </div>
+        <div id="t2" class="definition">
+          Maingatan at protektahan ang kagubatan.
+        </div>
+
+     <!-- End of NIPAS / Sustainable Forest Strategy -->
+<!-- NIPAS / Sustainable Forest Strategy -->
+<div class="term-row">
+  <b>National Integrated Protected Areas System (NIPAS)</b>
+  <button class="def-btn" onclick="toggle('t2')">Definition</button>
+</div>
+<div id="t2" class="definition">
+  Maingatan at protektahan ang kagubatan.
+</div>
+
+<div class="term-row">
+  <b>Sustainable Forest Management Strategy</b>
+  <button class="def-btn" onclick="toggle('t3')">Definition</button>
+</div>
+<div id="t3" class="definition">
+  Upang matakdaan ang permanente at sukat ng kagubatan.
+</div>
+
+<!-- LANDBANK -->
+<hr>
+<div class="box-title">LANDBANK OF THE PHILIPPINES</div>
+<div class="box-content scrollable">
+  Upang magkaroon ng kaagapay ang mga magsasaka sa pagpapaunlad ng kanilang kabuhayan.
+</div>
+
+<!-- SANGAY NG PAMAHALAAN -->
+<div class="box-title">SANGAY NG PAMAHALAAN NA TUMUTULONG SA SEKTOR NG AGRIKULTURA</div>
+<div class="box-content scrollable">
+  <ul>
+    <li><b>Department of Agriculture (DA):</b> Gumagabay sa mga magsasaka ukol sa makabagong teknolohiya at wastong paraan ng pagtatanim.</li>
+    <li><b>Bureau of Fisheries and Aquatic Resources (BFAR):</b> Paunlarin ang larangan ng pangingisda.</li>
+    <li><b>Bureau of Animal Industry (BAI):</b> Nangangasiwa sa larangan ng paghahayupan.</li>
+    <li><b>Ecosystem Research and Development Bureau (ERDB):</b> Nagsasagawa ng pananaliksik sa ecosystem upang magbigay ng siyentipikong batayan sa pangangalaga ng kapaligiran at yamang gubat.</li>
+  </ul>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<br><br>
+
+<hr color="white">
+<hr color="white">
+<!-- LESSON 3 -->
+<h2 class="lesson-title">SEKTOR NG INDUSTRIYA</h2>
+<p style="font-size:10px; text-align:center;">Click on Image </p>
+
+<div class="center-image">
+  <img src="industriya.jpg" id="industryImg" onclick="showIndustryDef()" style="width:100%; height:300px; object-fit:cover; cursor:pointer; border:4px solid #296374; box-shadow:4px 4px 10px #296374;">
+  
+  <!-- Hidden definition -->
+  <div id="industryDef" class="definition" style="margin-top:10px;">
+    - Tumutukoy sa pagproseso ng mga hilaw na materyal at paggawa ng mga produkto na kinakailangan para sa pampublikong pamilihan
+<br>
+- Naglalayong maiproseso ang mga hilaw na materyal upang makabuo ng produkto na ginagamit ng tao
+  </div>
+</div>
+
+<!-- Industry Section -->
+<div class="industry-layout" style="margin-top:30px; justify-content:space-between;">
+  <!-- Pagmimina Box -->
+  <div class="industry-box">
+    <div class="img-wrapper">
+      <img src="pagmimina.jpg" style="width:100%; height:150px; object-fit:cover; border:4px solid #296374; box-shadow:4px 4px 10px #296374;">
+    </div>
+    <p><b>Sektor: <br> p _ g _ i m _ _ a</b></p>
+    <input type="text" id="input1" placeholder="Type your answer" style="width:100%; padding:5px;">
+    <button class="def-btn" onclick="checkAnswer('input1','content1','Pagmimina')">Check</button>
+    <div id="wrong1" style="display:none; color:red; margin-top:5px;">Incorrect!</div>
+    <div id="content1" class="definition">
+      PAGMIMINA <br><br>
+
+Pagkuha at pagproseso ng mga yamang mineral (metal, di-metal, o enerhiya) upang gawing tapos na produkto o kabahagi ng yaring kalakal. Ang produkto, hilaw man o naproseso, ay nagbibigay kita para sa bansa.
+    </div>
+  </div>
+
+  <!-- Pagmamanupaktura -->
+  <div class="industry-box">
+    <div class="img-wrapper">
+      <img src="pagmamanupaktura.jpg" style="width:100%; height:150px; object-fit:cover; border:4px solid #296374; box-shadow:4px 4px 10px #296374;">
+    </div>
+    <p><b>Sektor: <br> p _ g m a _ _ n _ p _ k t _ r a</b></p>
+    <input type="text" id="input2" placeholder="Type your answer" style="width:100%; padding:5px;">
+    <button class="def-btn" onclick="checkAnswer('input2','content2','Pagmamanupaktura')">Check</button>
+    <div id="wrong2" style="display:none; color:red; margin-top:5px;">Incorrect!</div>
+    <div id="content2" class="definition">
+      PAGMAMANUPAKTURA <br><br>
+Paggawa ng mga produkto sa pamamagitan ng manual labor o ng mga makina. Nagkakaroon ng pisikal o kemikal na transpormasyon ang mga materyal o bahagi nito sa pagbuo ng mga bagong produkto.
+    </div>
+  </div>
+
+  <!-- Konstruksyon -->
+  <div class="industry-box">
+    <div class="img-wrapper">
+      <img src="konstruksyon.avif" style="width:100%; height:150px; object-fit:cover; border:4px solid #296374; box-shadow:4px 4px 10px #296374;">
+    </div>
+    <p><b>Sektor: <br> k _ n s _ _ u _ s y _ n</b></p>
+    <input type="text" id="input3" placeholder="Type your answer" style="width:100%; padding:5px;">
+    <button class="def-btn" onclick="checkAnswer('input3','content3','Konstruksyon')">Check</button>
+    <div id="wrong3" style="display:none; color:red; margin-top:5px;">Incorrect!</div>
+    <div id="content3" class="definition">
+      KONSTRUKSYON <br><br>
+Pagtatayo ng mga gusali, estruktura, at iba pang land improvements.
+    </div>
+  </div>
+
+  <!-- Utilities -->
+  <div class="industry-box">
+    <div class="img-wrapper">
+      <img src="utilities.jpg" style="width:100%; height:150px; object-fit:cover; border:4px solid #296374; box-shadow:4px 4px 10px #296374;">
+    </div>
+    <p><b>Sektor: <br> U _ i _ _ t _ e s</b></p>
+    <input type="text" id="input4" placeholder="Type your answer" style="width:100%; padding:5px;">
+    <button class="def-btn" onclick="checkAnswer('input4','content4','Utilities')">Check</button>
+    <div id="wrong4" style="display:none; color:red; margin-top:5px;">Incorrect!</div>
+    <div id="content4" class="definition">
+      UTILITIES <br><br>
+Pagtugon sa mga pangunahing pangangailangan ng mamamayan tulad ng tubig, kuryente, at gas. Paglalatag ng mga imprastraktura at angkop na teknolohiya upang maihatid ang serbisyo.
+    </div>
+  </div>
+
+<hr color="white">
+
+<hr color="white">
+
+<!-- RIGHT SIDE -->
+
+<hr color="white">
+
+<!-- FULL WIDTH POLICY SECTION -->
+<div class="policy-section">
+
+<h2>MGA PATAKARANG PANG-EKONOMIYA</h2>
+
+<div class="policy-wrapper">
+
+<!-- PAGE 1 -->
+<div class="policy-row active" id="policyPage1">
+
+<div class="policy-card">
+<div class="policy-law" onclick="toggleLaw('law1')">LAW 1</div>
+<div id="law1" class="policy-content">
+Filipino First Policy — Programang Filipino Muna ni Carlos P. Garcia upang mas mapalaki ang partisipasyon ng Pilipino sa ekonomiya.
+</div>
+</div>
+
+<div class="policy-card">
+<div class="policy-law" onclick="toggleLaw('law2')">LAW 2</div>
+<div id="law2" class="policy-content">
+Oil Deregulation Law (RA 8479) — Nagbukas ng kompetisyon sa industriya ng langis.
+</div>
+</div>
+
+<div class="policy-card">
+<div class="policy-law" onclick="toggleLaw('law3')">LAW 3</div>
+<div id="law3" class="policy-content">
+Microfinancing — Mababang interes na pautang ng mga bangko sa mahihirap na pamilya.
+</div>
+</div>
+
+<div class="policy-card">
+<div class="policy-law" onclick="toggleLaw('law4')">LAW 4</div>
+<div id="law4" class="policy-content">
+Online Business Policy — Online shopping, intermediary services, advertisements, at auctions.
+</div>
+</div>
+
+</div>
+
+
+<!-- PAGE 2 -->
+<div class="policy-row" id="policyPage2">
+
+<div class="policy-card">
+<div class="policy-law" onclick="toggleLaw('law5')">LAW 5</div>
+<div id="law5" class="policy-content">
+Retail Nationalization Act (RA 1180) — Pilipino lamang ang maaaring magmay-ari ng retail trade.
+</div>
+</div>
+
+<div class="policy-card">
+<div class="policy-law" onclick="toggleLaw('law6')">LAW 6</div>
+<div id="law6" class="policy-content">
+Retail Trade Liberalization Act (RA 8762) — Binuksan ang retail trade sa mga dayuhan.
+</div>
+</div>
+
+<div class="policy-card">
+<div class="policy-law" onclick="toggleLaw('law7')">LAW 7</div>
+<div id="law7" class="policy-content">
+Build-Operate-Transfer Law (RA 6957) — Pinapayagan ang pribadong sektor na magtayo at magpatakbo ng mga pasilidad.
+</div>
+</div>
+
+<div class="policy-card">
+<div class="policy-law" onclick="toggleLaw('law8')">LAW 8</div>
+<div id="law8" class="policy-content">
+Asset Privatization Trust — Pagbebenta ng mga korporasyong pagmamay-ari ng pamahalaan sa pribadong sektor.
+</div>
+</div>
+
+</div>
+
+
+<div class="policy-nav">
+<button class="policy-btn" onclick="showPolicies(1)">◀</button>
+<button class="policy-btn" onclick="showPolicies(2)">▶</button>
+</div>
+
+</div>
+</div><div class="industry-bottom">
+
+<!-- LEFT SIDE -->
+
+<div class="left-info">
+
+<h3>KAHALAGAHAN NG SEKTOR NG INDUSTRIYA</h3>
+
+<div class="reveal-box" onclick="reveal('kahalagahan')">
+CLICK TO REVEAL
+</div>
+
+<div id="kahalagahan" class="reveal-content">
+• Tumatanggap ng produkto mula sa agrikultura<br>
+• Nagkakaloob ng hanapbuhay<br>
+• Nagpapasok ng dolyar sa bansa<br>
+• Gumagamit ng makabagong teknolohiya<br>
+• Gumagawa ng intermediate products
+</div>
+
+<br>
+
+<h3>SULIRANIN NG INDUSTRIYA</h3>
+
+<div class="reveal-box" onclick="reveal('suliranin')">
+CLICK TO REVEAL
+</div>
+
+<div id="suliranin" class="reveal-content">
+• Pondo at kompetisyon<br>
+• Paghina ng lokal na industriya<br>
+• Demand
+</div>
+
+</div>
+
+
+<!-- RIGHT SIDE -->
+
+<div class="right-table">
+
+<h3>SANGAY NG PAMAHALAAN</h3>
+
+<table>
+
+<tr>
+<th>Ahensya</th>
+<th>Tungkulin</th>
+</tr>
+
+<tr>
+<td>DTI</td>
+<td>Nangangalaga sa industriya at pangangalakal.</td>
+</tr>
+
+<tr>
+<td>BOI</td>
+<td>Tumutulong sa mga bagong industriya at dayuhang mamumuhunan.</td>
+</tr>
+
+<tr>
+<td>PEZA</td>
+<td>Tumutulong sa paghahanap ng lugar para sa negosyo.</td>
+</tr>
+
+<tr>
+<td>SEC</td>
+<td>Nagrerehistro ng mga kompanya sa bansa.</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+</div>
+
+<hr color="white">
+<hr color="white">
+
+<!-- LESSON 4 PAGLILINGKOD -->
+
+<h2> SEKTOR NG PAGLILINGKOD </h2>
+<p style="font-size:15px; text-align:center;"> Click on the Image </p>
+
+<div class="service-section">
+
+<!-- IMAGE + DEFINITION -->
+<div class="service-top" onclick="reveal('serviceDef')">
+<img src="paglilingkod.avif" class="service-img">
+
+<div id="serviceDef" class="service-definition">
+<b>SEKTOR NG PAGLILINGKOD</b><br><br>
+Ang umaalalay sa buong yugto ng produksyon, distribusyon, kalakalan, at pagkonsumo ng mga produkto sa loob o labas ng bansa.
+Kilala rin ito bilang tersarya o ikatlong sektor ng ekonomiya matapos ang agrikultura at industriya.
+</div>
+</div>
+
+
+<div class="service-row">
+
+<!-- LEFT SIDE -->
+<div class="service-left">
+
+<h3>PORMAL NA SEKTOR SA ILALIM NG PAGLILINGKOD</h3>
+<p style="font-size:15px; text-align:center;"> (Click on Texts for Further Details) </p>
+
+<div class="term" onclick="reveal('s1')"> ☆ Transportasyon, komunikasyon, at mga imbakan</div>
+<div id="s1" class="term-def">
+- Mga serbisyong pampublikong sasakyan, telepono, at mga pinapaupahang bodega.
+</div>
+
+<div class="term" onclick="reveal('s2')">☆ Kalakalan</div>
+<div id="s2" class="term-def">
+- Pagpapalitan ng iba’t ibang produkto at serbisyo.
+</div>
+
+<div class="term" onclick="reveal('s3')">☆ Pananalapi</div>
+<div id="s3" class="term-def">
+- Serbisyong may kinalaman sa bangko, insurance, at pamumuhunan.
+</div>
+
+<div class="term" onclick="reveal('s4')">☆ Paupahang bahay at Real Estate</div>
+<div id="s4" class="term-def">
+- Mga apartment, subdivision developers, town house, at condominium.
+</div>
+
+<div class="term" onclick="reveal('s5')">☆ Paglilingkod ng Pampribado</div>
+<div id="s5" class="term-def">
+- Mga paglilingkod na nagmumula sa pribadong sektor.
+</div>
+
+<div class="term" onclick="reveal('s6')">☆ Paglilingkod ng Pampubliko</div>
+<div id="s6" class="term-def">
+- Mga serbisyong ipinagkakaloob ng pamahalaan.
+</div>
+
+</div>
+
+
+<!-- RIGHT SIDE -->
+<div class="service-right">
+
+<h3>KAHALAGAHAN</h3>
+
+<table>
+<tr><td>Tinitiyak na makakarating sa mamimili ang produkto</td></tr>
+<tr><td>Nagbibigay ng trabaho sa mamamayan</td></tr>
+<tr><td>Tinitiyak ang maayos na pag-iimbak at pagtitinda</td></tr>
+<tr><td>Nagpapataas ng GDP ng bansa</td></tr>
+<tr><td>Nagpapasok ng dolyar sa bansa</td></tr>
+</table>
+
+
+<!-- AGENCIES -->
+<h3>MGA AHENSYA</h3>
+
+<div class="policy-scroll">
+
+<div class="policy-card" onclick="reveal('a1')">
+<div class="policy-title">DOLE</div>
+<div id="a1" class="policy-content">
+Pangangalaga sa kapakanan ng mga manggagawang Pilipino at regulasyon ng mga patakaran sa paggawa.
+</div>
+</div>
+
+<div class="policy-card" onclick="reveal('a2')">
+<div class="policy-title">OWWA</div>
+<div id="a2" class="policy-content">
+Tumitingin sa kapakanan ng Overseas Filipino Workers.
+</div>
+</div>
+
+<div class="policy-card" onclick="reveal('a3')">
+<div class="policy-title">POEA</div>
+<div id="a3" class="policy-content">
+Programa para sa paghahanapbuhay sa ibayong-dagat.
+</div>
+</div>
+
+<div class="policy-card" onclick="reveal('a4')">
+<div class="policy-title">TESDA</div>
+<div id="a4" class="policy-content">
+Sanayin at paunlarin ang kasanayan ng mga manggagawa.
+</div>
+</div>
+
+<div class="policy-card" onclick="reveal('a5')">
+<div class="policy-title">PRC</div>
+<div id="a5" class="policy-content">
+Professional Regulation Commission — Nangangasiwa at sumusubaybay sa gawain ng mga manggagawang propesyonal upang matiyak ang kahusayan ng mga serbisyong propesyonal sa bansa.
+</div>
+</div>
+
+<div class="policy-card" onclick="reveal('a6')">
+<div class="policy-title">CHED</div>
+<div id="a6" class="policy-content">
+Commission on Higher Education — Nangangasiwa sa mga pamantasan at kolehiyo upang mapataas ang kalidad ng edukasyon sa mataas na antas.
+</div>
+</div>
+
+</div>
+
+
+<!-- LAWS -->
+<h3>MGA BATAS</h3>
+
+<div class="policy-scroll">
+
+<div class="policy-card" onclick="reveal('l1')">
+<div class="policy-title">Holiday Pay</div>
+<div id="l1" class="policy-content">
+Bayad ng manggagawa kahit hindi pumasok sa araw ng pista opisyal.
+</div>
+</div>
+
+<div class="policy-card" onclick="reveal('l2')">
+<div class="policy-title">Wage Rationalization Act</div>
+<div id="l2" class="policy-content">
+Pagsasaayos ng minimum wage.
+</div>
+</div>
+
+<div class="policy-card" onclick="reveal('l3')">
+<div class="policy-title">Overtime Pay</div>
+<div id="l3" class="policy-content">
+Karagdagang bayad sa trabaho na lampas 8 oras.
+</div>
+</div>
+
+<div class="policy-card" onclick="reveal('l4')">
+<div class="policy-title">Night Shift Differential</div>
+<div id="l4" class="policy-content">
+Karagdagang bayad sa trabaho sa pagitan ng 10PM–6AM.
+</div>
+</div>
+
+<div class="policy-card" onclick="reveal('l5')">
+<div class="policy-title">Service Charges (Art. 96)</div>
+<div id="l5" class="policy-content">
+Ang mga manggagawa sa establishment na may service charges ay may karapatan sa pantay na bahagi ng 85% ng kabuuang koleksiyon.
+</div>
+</div>
+
+<div class="policy-card" onclick="reveal('l6')">
+<div class="policy-title">Service Incentive Leave (Art. 95)</div>
+<div id="l6" class="policy-content">
+Ang manggagawa na nakapaglingkod ng hindi kukulangin sa isang taon ay may karapatan sa limang araw na leave na may bayad.
+</div>
+</div>
+
+<div class="policy-card" onclick="reveal('l7')">
+<div class="policy-title">RA 1161 — Maternity Leave</div>
+<div id="l7" class="policy-content">
+Benepisyo para sa nagdadalang-taong manggagawa sa pribadong sektor na may bayad na maternity leave.
+</div>
+</div>
+
+<div class="policy-card" onclick="reveal('l8')">
+<div class="policy-title">RA 8972 — Paternity Leave (Solo Parent)</div>
+<div id="l8" class="policy-content">
+Ipinagkakaloob sa solong magulang o indibidwal na may responsibilidad sa pagpapalaki ng anak.
+</div>
+</div>
+
+<div class="policy-card" onclick="reveal('l9')">
+<div class="policy-title">RA 8187 — Paternity Leave</div>
+<div id="l9" class="policy-content">
+Maaaring gamitin ng empleyadong lalaki sa unang apat na araw mula nang manganak ang kanyang legal na asawa.
+</div>
+</div>
+
+<div class="policy-card" onclick="reveal('l10')">
+<div class="policy-title">PD 851 — Thirteenth Month Pay</div>
+<div id="l10" class="policy-content">
+Nagbibigay ng karagdagang sahod sa mga empleyado bago o hindi lalagpas ng ika-24 ng Disyembre bawat taon.
+</div>
+</div>
+
+<div class="policy-card" onclick="reveal('l11')">
+<div class="policy-title">PD 626 — Employees Compensation Program</div>
+<div id="l11" class="policy-content">
+Compensation package para sa manggagawa kung may pagkakasakit o pinsalang may kaugnayan sa trabaho.
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+<hr color="white">
+<hr color="white">
+
+<!-- IMPORMAL NA SEKTOR LESSONNNN -->
+
+<h2> IMPORMAL NA SEKTOR </h2>
+<p style="font-size:15px; text-align:left;"> [Click on the Image or Terms]  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+
+<div class="impormal-row">
+
+  <!-- LEFT IMAGE + DEFINITION -->
+  <div class="impormal-left">
+    <img src="informalsect.webp" alt="Impormal na Sektor" class="impormal-img" onclick="toggle('impormalDef')">
+    <div id="impormalDef" class="impormal-definition">
+      - Sektor ng ekonomiya na walang pormal o salat sa mga dokumentong kailangan sa pagsasagawa ng gawaing pang-ekonomiya.
+     <br> - Ang kita ng sektor na ito ay HINDI naisasama sa kabuuang Gross Domestic Product (GDP) ng bansa.
+      <br> - Ito ay paraan ng mamamayan upang magkaroon ng kabuhayan/dagdag kita sa tuwing panahon ng pangangailangan.
+      <br> - Kilala rin sa tawag na Underground Economy.
+    </div>
+  </div>
+
+  <!-- RIGHT TERMS -->
+  <div class="impormal-right">
+    <div class="term" onclick="showTerm('halimbawa')">☆ Halimbawa</div>
+    <div class="term" onclick="showTerm('katangian')">☆ Katangian</div>
+    <div class="term" onclick="showTerm('anyo')">☆ Iba’t Ibang Anyo</div>
+    <div class="term" onclick="showTerm('dahilan')">☆ Dahilan</div>
+    <div class="term" onclick="showTerm('epekto')">☆ Epekto sa Ekonomiya</div>
+
+    <!-- Definitions -->
+    <div id="halimbawa" class="term-content">
+      * Nagtitinda sa kalsada<br>
+      * Pedicab driver<br>
+      * Karpintero<br>
+      * Hindi rehistradong pampublikong sasakyan
+    </div>
+    <div id="katangian" class="term-content">
+      - Hindi nakarehistro sa pamahalaan<br>
+      - Hindi nagbabayad ng buwis<br>
+      - Walang legal at pormal na balangkas para sa negosyo
+    </div>
+    <div id="anyo" class="term-content">
+      - Mga gawaing sa loob ng tahanan<br>
+      - Pansibiko, panrelihiyon, pagkakawanggawa<br>
+      - Sari-sari stores, pagtitinda sa labas ng bahay<br>
+      - Ilegal na gawain tulad ng pagnanakaw, ilegal na droga, piracy, prostitusyon
+    </div>
+    <div id="dahilan" class="term-content">
+      - Makaligtas sa pagbabayad ng buwis<br>
+      - Makaiwas sa mahaba at masalimuot na proseso ng pamahalaan<br>
+      - Kawalan ng regulasyon ng gobyerno<br>
+      - Makapaghanapbuhay nang maliit ang kapital<br>
+      - Malabanan ang kahirapan
+    </div>
+    <div id="epekto" class="term-content">
+      - Pagbaba ng nalilikom na buwis<br>
+      - Banta sa kapakanan ng mamimili<br>
+      - Paglaganap ng ilegal na gawain
+    </div>
+  </div>
+
+</div>
+
+<!-- BOTTOM SCROLLABLE CARDS -->
+
+    <!-- MGA BATAS SA IMPORMAL NA SEKTOR -->
+<div class="policy-section">
+  <h3 color="#EDEDCE" align="center">MGA BATAS, PROGRAMA, AT PATAKARANG PANG-EKONOMIYA SA IMPORMAL NA SEKTOR</h3>
+  <div class="policy-scroll">
+    <div class="policy-card" onclick="toggleLaw('law1Def')">
+      <div class="policy-title">R.A. 8425</div>
+      <div id="law1Def" class="policy-content">
+        Social Reform and Poverty Alleviation Act of 1997 — Iahon sa kahirapan ang mga Pilipinong kabilang sa impormal na sektor. Upang maisakatuparan ang mga probisyon ng batas, itinatag ang National Anti-Poverty Commission.
+      </div>
+    </div>
+
+    <div class="policy-card" onclick="toggleLaw('law2Def')">
+      <div class="policy-title">R.A. 9710</div>
+      <div id="law2Def" class="policy-content">
+        Magna Carta of Women — Inaalis ang lahat ng uri ng diskriminasyon laban sa kababaihan.
+      </div>
+    </div>
+
+    <div class="policy-card" onclick="toggleLaw('law3Def')">
+      <div class="policy-title">P.D. 422</div>
+      <div id="law3Def" class="policy-content">
+        Philippine Labor Code — Pangunahing batas ng bansa para sa mga manggagawa na itinatag noong Mayo 1, 1974.
+      </div>
+    </div>
+
+    <div class="policy-card" onclick="toggleLaw('law4Def')">
+      <div class="policy-title">R.A. 7796</div>
+      <div id="law4Def" class="policy-content">
+        Technical Education and Skills Development Act of 1994 — Layuning palakasin ang pakikiisa ng iba't ibang sektor upang mapabuti ang kasanayan at kalidad ng yamang tao sa bansa.
+      </div>
+    </div>
+
+    <div class="policy-card" onclick="toggleLaw('law5Def')">
+      <div class="policy-title">R.A. 8282</div>
+      <div id="law5Def" class="policy-content">
+        Social Security Act of 1997 — Nagtatakda ng tungkulin ng estado na paunlarin at pangalagaan ang seguridad at kagalingang panlipunan ng mga manggagawa.
+      </div>
+    </div>
+
+    <div class="policy-card" onclick="toggleLaw('law6Def')">
+      <div class="policy-title">R.A. 7875</div>
+      <div id="law6Def" class="policy-content">
+        National Health Insurance Act of 1995 — Nagtatag ng Philippine Health Insurance Corporation (PhilHealth) upang matiyak na may maayos at sistematikong kaseguruhang pangkalusugan ang lahat ng Pilipino.
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- MGA PROGRAMA PARA SA MAMAMAYAN -->
+<h3 color="#EDEDCE" align="center">MGA PROGRAMA PARA SA MAMAMAYAN</h3>
+  <div class="policy-section">
+    <div class="policy-scroll">
+   <div class="policy-card" onclick="reveal('prog1')">
+        <div class="policy-title">DILP</div>
+        <div id="prog1" class="policy-content">
+          Dole Integrated Livelihood Program — Nagbibigay ng pagsasanay at tulong pangkabuhayan para sa sariling hanapbuhay.
+        </div>
+      </div>
+     <div class="policy-card" onclick="reveal('prog2')">
+        <div class="policy-title">SEA-K</div>
+        <div id="prog2" class="policy-content">
+          Self-Employment Assistance Kaunlaran Program — Tumutulong sa mahihirap na pamilya sa pagsasanay at pagsisimula ng negosyo.
+        </div>
+      </div>
+     <div class="policy-card" onclick="reveal('prog3')">
+        <div class="policy-title">ISLA</div>
+        <div id="prog3" class="policy-content">
+          Integrated Services for Livelihood Advancement of the Fisherfolks — Suporta sa pamamagitan ng pagsasanay at kagamitan upang mapaunlad ang hanapbuhay.
+        </div>
+      </div>
+    <div class="policy-card" onclick="reveal('prog4')">
+        <div class="policy-title">CWP</div>
+        <div id="prog4" class="policy-content">
+          Cash-For-Work Program — Pansamantalang kita para sa nasalanta kapalit ng trabahong pang-rehabilitasyon.
+        </div>
+      </div>
+<div class="policy-card" onclick="reveal('prog5')">
+        <div class="policy-title">4Ps</div>
+        <div id="prog5" class="policy-content">
+          Pantawid Pamilyang Pilipino Program — Tulong-pinansyal sa pinakamahihirap na Pilipino kapalit ng pagsunod sa mga kondisyong pangkalusugan at pang-edukasyon ng kanilang mga anak.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Message to future self: Please tell me how to solve this error Ive spent almost 40 mins on WHAT DID I DO WRONG -->
+
+<br><br>
+<hr color="white">
+<hr color="white">
+
+<!-- KALAKALANG PANLABAS LESSON -->
+
+<h2>KALAKALANG PANLABAS</h2>
+<div class="lesson-section">
+  
+  
+  <div class="lesson-container">
+    
+    <!-- LEFT SIDE: Image + Description + Quiz -->
+    <div class="lesson-left">
+      <div class="image-box">
+        <img src="trading.webp" alt="Kalakalang Panlabas" />
+        <p align="justify" style="background-color:#629FAD;">
+               - Palitan ng produkto at serbisyo sa pagitan ng mga bansa. <br> - Ito ay nagaganap sapagkat walang bansa ang maaaring makatugon sa lahat ng kanyang pangangailangan ng walang tulong mula sa ibang bansa.
+        </p>
+      </div>
+      <button onclick="showTradeQuiz()">[Quiz myself!]</button>
+      
+      <div id="tradeQuiz" class="quiz-box">
+        <p>Match the definition with the correct term:</p>
+        <ol>
+          <li>Pagpapadala ng mga produkto at serbisyo sa ibang bansa</li>
+          <li>Pagbili ng kalakal mula sa ibang bansa</li>
+          <li>Dalawang bansa lang ang kalahok</li>
+          <li>Organisasyon at isang bansa ang kalahok</li>
+        </ol>
+        <select id="tradeAnswer1">
+          <option value="">Choose...</option>
+          <option value="export">Export</option>
+          <option value="import">Import</option>
+          <option value="bilateral">Bilateral</option>
+          <option value="bloc">Bloc</option>
+        </select>
+        <select id="tradeAnswer2">
+          <option value="">Choose...</option>
+          <option value="export">Export</option>
+          <option value="import">Import</option>
+          <option value="bilateral">Bilateral</option>
+          <option value="bloc">Bloc</option>
+        </select>
+        <select id="tradeAnswer3">
+          <option value="">Choose...</option>
+          <option value="export">Export</option>
+          <option value="import">Import</option>
+          <option value="bilateral">Bilateral</option>
+          <option value="bloc">Bloc</option>
+        </select>
+        <select id="tradeAnswer4">
+          <option value="">Choose...</option>
+          <option value="export">Export</option>
+          <option value="import">Import</option>
+          <option value="bilateral">Bilateral</option>
+          <option value="bloc">Bloc</option>
+        </select>
+        <button onclick="checkTradeQuiz()">Submit</button>
+        <p id="tradeResult"></p>
+      </div>
+    </div>
+    
+    <!-- RIGHT SIDE: Dahilan + Policy Quiz -->
+    <div class="lesson-right">
+      <h3>DAHILAN NG KALAKALANG PANLABAS</h3>
+      <div class="reveal-buttons">
+        <button onclick="revealReason('tech')">Pagkakaiba ng Teknolohiya</button>
+        <div id="tech" class="reveal-text">Nagkakaiba ang teknolohiya ng bawat bansa kaya may kalakalang panlabas.</div>
+
+        <button onclick="revealReason('resources')">Pagkakaiba sa Pinagkukunang Yaman</button>
+        <div id="resources" class="reveal-text">Ang iba't ibang yaman ng bansa ang dahilan ng pag-aangkat at pagluluwas.</div>
+
+        <button onclick="revealReason('taste')">Pagkakaiba sa Panlasa</button>
+        <div id="taste" class="reveal-text">Iba-iba ang panlasa ng tao sa produkto kaya may kalakalang panlabas.</div>
+
+        <button onclick="revealReason('cost')">Pagkakaiba sa Halaga ng Produksyon</button>
+        <div id="cost" class="reveal-text">Nagkakaiba ang gastos sa produksyon kaya may kalakalang panlabas.</div>
+      </div>
+
+<hr>
+
+      <h3>PATAKARANG UMAAPEKTO SA KALAKALANG PANLABAS</h3>
+      <p>Drag and drop the correct policy name to its definition:</p>
+      <div class="drag-quiz">
+        <div class="definitions">
+          <div class="def-box" data-answer="tariff">Buwis sa mga produktong inaangkat. Nagpapataas ng presyo at nagpapababa ng benta ng inaangkat ng produkto. Nagpapataw ng mataas na taripa upang mapigil ang pagpasok ng dayuhang produkto.</div>
+          <div class="def-box" data-answer="quota">Maaaring limitahan (kotahan) ang pagpasok ng mga kalabang produkto.</div>
+          <div class="def-box" data-answer="subsidy">Tulong na ibinibigay ng gobyerno upang bumaba ang halaga ng produksyon ng mga lokal na produkto.</div>
+        </div>
+        <div class="options">
+          <div draggable="true" class="drag-item" data-value="tariff">Tariff</div>
+          <div draggable="true" class="drag-item" data-value="quota">Quota</div>
+          <div draggable="true" class="drag-item" data-value="subsidy">Subsidy</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCROLLABLE CARDS ROW -->
+<div class="scroll-cards">
+  
+  <div class="card">
+    <h3>BATAYAN NG KALAKALANG PANLABAS</h3>
+    <p><strong onclick="toggleDef('absAdv')" class="clickable">Absolute Advantage</strong></p>
+    <p id="absAdv" class="definition">Nakakalikha ng mas maraming bilang ng produkto gamit ang mas kaunting salik ng produksyon kumpara sa ibang bansa.</p>
+    <p><strong onclick="toggleDef('compAdv')" class="clickable">Comparative Advantage</strong></p>
+    <p id="compAdv" class="definition">Ang bansa ay magkakaroon ng espesyalisasyon sa paglikha ng kalakal. Kapag kaya ng bansa gawin ang kalakal ng mas efficient kumpara sa ibang bansa. Hal. Cebu may comparative advantage sa pagluto ng Lechon.</p>
+  </div>
+  
+  <div class="card">
+    <h3>BALANCE OF TRADE (BOT)</h3>
+    <p>Kalagayan ng kabayaran ng pagluluwas (export) at sa pag-aangkat (import).</p>
+    <p><strong>Trade Deficit:</strong> import &gt; export</p>
+    <p><strong>Trade Surplus:</strong> import &lt; export</p>
+  </div>
+  
+  <div class="card">
+    <h3>KABUTIHAN NG PAKIKIPAGKALAKALAN</h3>
+    <ul>
+      <li>Mas maraming produkto ang mapagpipilian sa pamilihan.</li>
+      <li>Napapataas nito ang kalidad ng mga produkto na nabibili sa pamilihan.</li>
+      <li>Nagkakaroon ng pagkakaunawaan ang mamamayan ng bansang nakikipagkalakalan.</li>
+      <li>Lumalawak ang pamilihan ng mga produkto sa bansa.</li>
+    </ul>
+  </div>
+  
+  <div class="card">
+    <h3>DI-KABUTIHAN NG PAKIKIPAGKALAKALAN</h3>
+    <ul>
+      <li>Nagiging palaasa ang mga mamamayan sa produktong imported.</li>
+      <li>Hindi nalilinang ang pagkamalikhain ng mga mamamayan dahil umaasa na lamang sila sa mga produktong gawa sa ibang bansa.</li>
+      <li>Pagkawala ng sariling pagkakakilanlan bunga ng pagpasok ng dayuhang kultura sa lipunan.</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- SAMAHANG PANDAIGDIGANG PANG-EKONOMIKO -->
+<h3 align="center">SAMAHANG PANDAIGDIGANG PANG-EKONOMIKO</h3>
+<div class="policy-section">
+  <div class="policy-scroll">
+    <div class="policy-card" onclick="toggleCard('wto')">
+      <div class="policy-title">World Trade Organization (WTO)</div>
+      <div id="wto" class="policy-content">
+        <p>Pinasinayaan at nabuo noong Enero 1, 1995.</p>
+        <p>Samahang namamahala sa pandaigdigang patakaran ng sistema ng kalakalan o global trading system sa pagitan ng mga kasaping estado o member states.</p>
+        <p><strong>LAYUNIN:</strong></p>
+        <ul>
+          <li>Pagsusulong ng maayos na kalakalan sa pamamagitan ng pagpapababa ng hadlang sa kalakalan (trade barriers).</li>
+          <li>Plataporma para sa negosasyon at tulong-teknikal sa developing countries.</li>
+          <li>Paggamit ng trade sanction sa mga kasaping hindi sumusunod sa desisyon ng samahan.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="policy-card" onclick="toggleCard('apec')">
+      <div class="policy-title">Asia-Pacific Economic Council (APEC)</div>
+      <div id="apec" class="policy-content">
+        <p>Isulong ang kaunlarang pang-ekonomiya at katiwasayan sa rehiyong Asia-Pacific.</p>
+        <p>Itinatag noong Nobyembre 1989.</p>
+        <p><strong>LAYUNIN:</strong></p>
+        <ul>
+          <li>Liberalisasyon ng pakikipagkalakalan at pamumuhunan.</li>
+          <li>Pagpapabilis at pagpapadali ng pagnenegosyo.</li>
+          <li>Pagtutulungang pang-ekonomiya at teknikal.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="policy-card" onclick="toggleCard('asean')">
+      <div class="policy-title">Association of Southeast Asian Nations (ASEAN)</div>
+      <div id="asean" class="policy-content">
+        <p>Paunlarin at isulong ang malayang kalakalan sa bawat kasapi ng ASEAN pati ang mga bansang dialogue partner nito.</p>
+        <p>Itinatag noong August 8, 1967.</p>
+        <p><strong>LAYUNIN:</strong></p>
+        <ul>
+          <li>Nabuo ang ASEAN Free Trade Area (AFTA) noong January 28, 1992, sa Singapore.</li>
+          <li>Nakabatay sa Common Effective Preferential Tariff (CEPT) na nag-aalis ng taripa at quota para sa mas malayang daloy ng produkto sa ASEAN.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROGRAMANG NAGTATAGUYOD SA KALAKALANG PANLABAS -->
+
+<h3 align="center">PROGRAMANG NAGTATAGUYOD SA KALAKALANG PANLABAS</h3>
+<div class="policy-section">
+  <div class="policy-scroll">
+    <div class="policy-card" onclick="toggleCard('r7721')">
+      <div class="policy-title">Liberalisasyon sa Sektor ng Pagbabangko (R.A 7721)</div>
+      <div id="r7721" class="policy-content">
+        Pinapayagan ang dayuhang bangko na magtayo at magpatakbo ng sangay sa bansa.
+      </div>
+    </div>
+
+    <div class="policy-card" onclick="toggleCard('ftsc')">
+      <div class="policy-title">Foreign Trade Services Corps (FTSC)</div>
+      <div id="ftsc" class="policy-content">
+        Nagtataguyod ng mga lokal na produkto sa pandaigdigang pamilihan sa pamamagitan ng iba't ibang estratehiya.
+      </div>
+    </div>
+
+    <div class="policy-card" onclick="toggleCard('tiic')">
+      <div class="policy-title">Trade and Industry Information Center (TIIC)</div>
+      <div id="tiic" class="policy-content">
+        Nangangalap at nagpapalaganap ng datos at impormasyon tungkol sa ekonomiya, kalakalan, at industriya, pamahalaan, at kapakanan ng mamimili.
+      </div>
+    </div>
+
+    <div class="policy-card" onclick="toggleCard('cic')">
+      <div class="policy-title">Center for Industrial Competitiveness</div>
+      <div id="cic" class="policy-content">
+        Naglulunsad ng mga programa at pagsasanay upang mapahusay ang kakayahan at produktibidad ng manggagawa.
+      </div>
+    </div>
+  </div>
+</div>
+
+ <br><br>
+<hr color="white">
+<hr color="white">
+
+
+<!-- JAVASCRIPTTTTTTT sigh -->
+<script>
+
+function toggle(id){
+var x=document.getElementById(id);
+if(x.style.display==="block"){x.style.display="none";}
+else{x.style.display="block";}
+}
+
+function showAgri(){
+document.getElementById("agriLeft").classList.add("show-left");
+document.getElementById("agriRight").classList.add("show-right");
+}
+
+function showAnswer(){
+document.getElementById("quizAnswer").style.display="block";
+}
+
+function showProblem(card){
+var img=card.querySelector("img");
+var text=card.querySelector(".problem-content");
+
+img.style.display="none";
+text.style.display="block";
+}
+
+function showIndustryDef(){
+var def=document.getElementById('industryDef');
+if(def.style.display==="none" || def.style.display===""){
+def.style.display="block";
+}else{
+def.style.display="none";
+}
+}
+
+function checkAnswer(inputId, contentId, correct){
+var userInput=document.getElementById(inputId).value.trim().toLowerCase();
+var correctAnswer=correct.toLowerCase();
+var wrongMsg=document.getElementById('wrong'+inputId.slice(-1));
+var box=document.getElementById(contentId).parentElement;
+var img=box.querySelector('img');
+
+if(userInput===correctAnswer){
+document.getElementById(contentId).style.display='block';
+document.getElementById(inputId).style.display='none';
+wrongMsg.style.display='none';
+if(img) img.style.display='none';
+}else{
+wrongMsg.style.display='block';
+}
+}
+
+function toggleCard(id){
+  const card = document.getElementById(id);
+  card.style.display = (card.style.display === 'block') ? 'none' : 'block';
+}
+function toggleLaw(id){
+var x=document.getElementById(id);
+if(x.style.display==="block"){
+x.style.display="none";
+}else{
+x.style.display="block";
+}
+}
+
+function showPolicies(page){
+
+var p1=document.getElementById("policyPage1");
+var p2=document.getElementById("policyPage2");
+
+p1.classList.remove("active");
+p2.classList.remove("active");
+
+if(page===1){
+p1.classList.add("active");
+}else{
+p2.classList.add("active");
+}
+
+}
+
+function showCards(id){
+
+var rows=document.querySelectorAll(".card-row");
+
+rows.forEach(function(r){
+r.classList.remove("active");
+});
+
+document.getElementById(id).classList.add("active");
+
+}
+
+function toggle(id){
+  var x = document.getElementById(id);
+  if(x.style.display === "none" || x.style.display === ""){
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// Only one term visible at a time
+function showTerm(id){
+  const terms = ['halimbawa','katangian','anyo','kahalagahan','dahilan','epekto'];
+  terms.forEach(t => {
+    document.getElementById(t).style.display = (t===id) ? 'block' : 'none';
+  });
+}
+
+// Reveal scroll cards individually
+function reveal(id){
+  const x = document.getElementById(id);
+  x.style.display = (x.style.display==='block') ? 'none' : 'block';
+}
+
+// LEFT SIDE: Quiz
+function showTradeQuiz() {
+  document.getElementById("tradeQuiz").style.display = "block";
+}
+
+function checkTradeQuiz() {
+  const answers = ["export", "import", "bilateral", "bloc"];
+  let correct = 0;
+  for (let i = 1; i <= 4; i++) {
+    const val = document.getElementById("tradeAnswer"+i).value;
+    if (val === answers[i-1]) correct++;
+  }
+  document.getElementById("tradeResult").textContent = 
+    correct === 4 ? "All Correct!" : "Try Again!";
+}
+
+// RIGHT SIDE: Reveal statements
+function revealReason(id){
+  const el = document.getElementById(id);
+  el.style.display = (el.style.display === "block") ? "none" : "block";
+}
+
+// DRAG AND DROP QUIZ
+const dragItems = document.querySelectorAll('.drag-item');
+const defBoxes = document.querySelectorAll('.def-box');
+
+dragItems.forEach(item => {
+  item.addEventListener('dragstart', dragStart);
+});
+defBoxes.forEach(box => {
+  box.addEventListener('dragover', dragOver);
+  box.addEventListener('drop', dropItem);
+});
+
+let draggedItem = null;
+
+function dragStart(e){
+  draggedItem = e.target;
+  e.dataTransfer.setData('text/plain', e.target.dataset.value);
+}
+
+function dragOver(e){
+  e.preventDefault();
+}
+
+function dropItem(e){
+  const answer = e.target.dataset.answer;
+  const val = e.dataTransfer.getData('text/plain');
+  if(answer === val){
+    e.target.textContent = "Correct!";
+    e.target.style.background = "#C8E6C9";
+    draggedItem.style.display = "none";
+  } else {
+    e.target.textContent = "Try Again!";
+    e.target.style.background = "#FFCDD2";
+  }
+}
+
+
+function toggleDef(id){
+  const def = document.getElementById(id);
+  def.style.display = (def.style.display==='block') ? 'none' : 'block';
+}
+</script>
+
+</body>
+</html>
+

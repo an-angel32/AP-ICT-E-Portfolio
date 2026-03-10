@@ -1,0 +1,35 @@
+<html?
+<head><title>JAZMIN</title></head>
+<body>
+
+<h1 style="text-align:center"> My Personal Space </h1>
+
+<p> I am Jazmin Frances R. Cayabyab, but you may also call me "Jaz" for short.</p>
+
+<p> I was born on July 15, 2010. As of today, I am 15 years old.</p>
+
+<table>
+  <tr>
+    <th>CATEGORY</th>
+    <th>FAVOURITE</th>
+  </tr>
+  <tr>
+    <td>Colors</td>
+    <td>Blue, White</td>
+  </tr>
+<tr>
+    <td>Hobbies</td>
+    <td>Reading, Journaling</td>
+  </tr>
+<td>Dessert</td>
+    <td>Mango Graham</td>
+  </tr>
+<tr>
+    <td>Song Artists</td>
+    <td>The Neighborhood, Arctic Monkkeys</td>
+  </tr>
+<tr>
+</table>
+
+</body>
+</html>

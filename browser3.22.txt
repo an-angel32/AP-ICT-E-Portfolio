@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Browser Output 3.1</title></head>
+<body>
+
+<h1> Line-spacing Sample </h1>
+
+<p style="linespacing:20px;">
+Why does this sentence <br>
+seem so far apart? <br>
+How exciting!>
+</p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Math Methods Sample!!!</title>
+</head>
+
+<body>
+
+<h2>Commonly Used Math Methods</h2>
+
+<p id="result"></p>
+
+<script>
+var power = Math.pow(2,3);
+var maximum = Math.max(5,9);
+var minimum = Math.min(5,9);
+
+document.getElementById("result").innerHTML =
+"2 to the power of 3 = " + power + "<br>" +
+"Larger value between 5 and 9 = " + maximum + "<br>" +
+"Smaller value between 5 and 9 = " + minimum;
+</script>
+
+</body>
+</html>

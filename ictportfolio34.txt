@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head><title>ICT Q3-Q4</title>
+
+<style>
+.lesson-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.lesson-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.lesson-row.bottom-row {
+  justify-content: center; /* center the single bottom box */
+}
+
+.lesson-box {
+  background-color: #EDEDCE;
+  border-radius: 10px;
+  padding: 15px;
+  flex: 1 1 45%; /* adjusts for 2 per row */
+  max-width: 45%;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.lesson-box img {
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.caption {
+  font-size: 0.9em;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+</style>
+
+</head>
+<body>
+
+<!-- TOP ROW -->
+  <div class="lesson-row">
+    <div class="lesson-box">
+      <h3>Lesson 1</h3>
+      <img src="browser3.1.png" alt="Image 1A">
+      <p class="caption">Text Coding</p>
+      <img src="browser3.11.png" alt="Image 1B">
+      <p class="caption">Browser Output</p>
+    </div>
+    <div class="lesson-box">
+      <h3>Lesson 2</h3>
+      <img src="browser3.2.png" alt="Image 2A">
+      <p class="caption">Text Coding</p>
+      <img src="browser3.22.png" alt="Image 2B">
+      <p class="caption">Browser Output</p>
+    </div>
+  </div>
+
+  <!-- BOTTOM ROW -->
+  <div class="lesson-row bottom-row">
+    <div class="lesson-box">
+      <h3>Lesson 3</h3>
+      <img src="browser3.3.png" alt="Image 3A">
+      <p class="caption">Text Coding</p>
+      <img src="browser3.33.png" alt="Image 3B">
+      <p class="caption">Browser Output</p>
+    </div>
+  </div>
+
+</div>
+
