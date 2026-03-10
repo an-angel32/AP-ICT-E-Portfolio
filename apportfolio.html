@@ -3,65 +3,30 @@
 <style>
 
  /* Navbar container */
+    /* Navbar container */
     .navbar {
       background-color: #982598;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
+      padding: 10px 20px;
+      text-align: center;
     }
 
-    /* Navbar list */
-    .navbar ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 20px;
-    }
-
-    /* Navbar items */
-    .navbar li {
-      position: relative;
-    }
-
-    /* Navbar links */
+    /* All links in navbar */
     .navbar a {
       text-decoration: none;
       color: #F1E9E9;
-      padding: 8px 12px;
-      display: block;
-      font-weight: bold;
-    }
-
-    .navbar a:hover {
-      text-decoration: underline;
-    }
-
-    /* Dropdown menu */
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #982598;
-      min-width: 140px;
-      top: 100%;
-      left: 0;
-      z-index: 1;
-      border-radius: 5px;
-    }
-
-    .dropdown-content a {
-      padding: 8px 12px;
-    }
-
-    /* Show dropdown on hover */
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    /* Optional: small gap for sublinks */
-    .dropdown-content a:hover {
       background-color: #7a1e86;
+      padding: 8px 14px;
+      margin: 0 5px;
+      border-radius: 5px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    /* Hover effect */
+    .navbar a:hover {
+      background-color: #F1E9E9;
+      color: #15173D;
+      text-decoration: underline;
     }
   
   body {font-family: 'Cambria Math', serif;
@@ -80,27 +45,17 @@
 
 <body style="background-color:#3a151c; font-size:30px;">
 
- <nav class="navbar">
-    <ul>
-      <li><a href="eportfolio.html">PERSONAL PAGE</a></li>
+ <div class="navbar">
+    <a href="eportfolio.html">PERSONAL PAGE</a> |
 
-      <li class="dropdown">
-        <a href="#">ICT PAGE</a>
-        <ul class="dropdown-content">
-          <li><a href="ictportfolio.html">Q1-Q2</a></li>
-          <li><a href="ictportfolio34.html">Q3-Q4</a></li>
-        </ul>
-      </li>
+    <span style="font-weight:bold;">ICT PAGE</span>
+    <a href="ictportfolio.html">Q1-Q2</a>
+    <a href="ictportfolio34.html">Q3-Q4</a> |
 
-      <li class="dropdown">
-        <a href="#">AP PAGE</a>
-        <ul class="dropdown-content">
-          <li><a href="apportfolio.html">Q2</a></li>
-          <li><a href="apportfolioq4.html">Q4</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
+    <span style="font-weight:bold;">AP PAGE</span>
+    <a href="apportfolio.html">Q2</a>
+    <a href="apportfolioq4.html">Q4</a> |
+  </div>
 <hr>
 
 <h1 style="font-size:50px; text-align:center; border:5px solid #fb9e32; background-color:#fbc86d; color:white;">ARALING PANLIPUNAN</h1>
@@ -714,6 +669,7 @@ Shortage: Nangyayari ito kapag mas mataas ang demand kaysa supply. Ibig sabihin,
 </body>
 
 </html>
+
 
 
 
