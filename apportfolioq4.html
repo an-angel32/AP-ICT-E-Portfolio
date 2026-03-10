@@ -5,56 +5,67 @@
 
 <style>
 
-/* Navbar base */
-.navbar {
-  background-color: #15173D;
-  overflow: hidden;
-  font-family: Arial, sans-serif;
-}
+/* Navbar container */
+    .navbar {
+      background-color: #982598;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
 
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
+    /* Navbar list */
+    .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
 
-.navbar li {
-  position: relative;
-}
+    /* Navbar items */
+    .navbar li {
+      position: relative;
+    }
 
-.navbar li a {
-  display: block;
-  color: #F1E9E9;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
+    /* Navbar links */
+    .navbar a {
+      text-decoration: none;
+      color: #F1E9E9;
+      padding: 8px 12px;
+      display: block;
+      font-weight: bold;
+    }
 
-.navbar li a:hover {
-  background-color: #982598;
-}
+    .navbar a:hover {
+      text-decoration: underline;
+    }
 
-/* Dropdown */
-.navbar .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #15173D;
-  min-width: 160px;
-  z-index: 1;
-  flex-direction: column;
-}
+    /* Dropdown menu */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #982598;
+      min-width: 140px;
+      top: 100%;
+      left: 0;
+      z-index: 1;
+      border-radius: 5px;
+    }
 
-.navbar .dropdown-content li a {
-  padding: 10px 14px;
-  text-align: left;
-}
+    .dropdown-content a {
+      padding: 8px 12px;
+    }
 
-/* Show dropdown on hover */
-.navbar .dropdown:hover .dropdown-content {
-  display: flex;
-  flex-direction: column;
-}
+    /* Show dropdown on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Optional: small gap for sublinks */
+    .dropdown-content a:hover {
+      background-color: #7a1e86;
+    }
 
 body{
 background-color:#0C2C55;
@@ -1048,26 +1059,26 @@ background-color:#629FAD;
 <body style="font-family:Bell MT;">
 
   <nav class="navbar">
-  <ul>
-    <li><a href="eportfolio.html">Personal Page</a></li>
+    <ul>
+      <li><a href="eportfolio.html">PERSONAL PAGE</a></li>
 
-    <li class="dropdown">
-      <a href="#">ICT Page</a>
-      <ul class="dropdown-content">
-        <li><a href="ictportfolio.html">Q1-Q2</a></li>
-        <li><a href="ictportfolio34.html">Q3-Q4</a></li>
-      </ul>
-    </li>
+      <li class="dropdown">
+        <a href="#">ICT PAGE</a>
+        <ul class="dropdown-content">
+          <li><a href="ictportfolio.html">Q1-Q2</a></li>
+          <li><a href="ictportfolio34.html">Q3-Q4</a></li>
+        </ul>
+      </li>
 
-    <li class="dropdown">
-      <a href="#">AP Page</a> <!-- no main AP page -->
-      <ul class="dropdown-content">
-        <li><a href="apportfolio.html">Q2</a></li>
-        <li><a href="apportfolioq4.html">Q4</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+      <li class="dropdown">
+        <a href="#">AP PAGE</a>
+        <ul class="dropdown-content">
+          <li><a href="apportfolio.html">Q2</a></li>
+          <li><a href="apportfolioq4.html">Q4</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 
 <hr color="white">
 <hr color="white">
@@ -2665,6 +2676,7 @@ function toggleDef(id){
 
 </body>
 </html>
+
 
 
 
